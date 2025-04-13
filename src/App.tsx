@@ -1,8 +1,18 @@
+import HeroImage from "./Components/HeroImage/HeroImage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./Components/HomePage/HomePage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+]);
 function App() {
   return (
-    <>
-      <div className="bg-red-500">HEllo</div>
-    </>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
