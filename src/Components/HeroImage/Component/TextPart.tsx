@@ -1,0 +1,24 @@
+import React from "react";
+
+const TextPart = () => {
+  return (
+    <div className=" pt-7 w-[50%] space-y-10 px-6 font-semibold text-gray-600 text-lg">
+      <div className="font-SpaceMono text-4xl font-bold  px-5 whitespace-break-spaces leading-14 italic text-black">
+        Empower Your Users with Secure and Convenient One-Time
+      </div>
+
+      <div className="">
+        OTP-Mailer is a powerful tool that simplifies the process of sending
+        one-time passwords to your users' Gmail accounts
+      </div>
+
+      <div>
+        Customize your email templates, choose from our pre-designed options
+      </div>
+
+      <div></div>
+    </div>
+  );
+};
+
+export default TextPart;
