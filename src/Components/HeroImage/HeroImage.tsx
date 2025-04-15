@@ -4,7 +4,7 @@ import TextPart from "./Component/TextPart";
 
 const HeroImage = () => {
   return (
-    <div className="font-SpaceMono bg-[#f3e5dc]  p-4">
+    <div className="font-SpaceMono bg-[#f3e5dc]  p-4 rounded-bl-[100px]">
       <Navbar />
       <div className="w-full flex justify-center my-10">
         <div className="text-7xl font-SpaceMono font-bold italic w-[50%] text-center">
