@@ -4,7 +4,7 @@ import LoginButton from "../Buttons/Login/LoginButton";
 
 const Navbar = () => {
   return (
-    <div className="text-black  p-1 flex justify-between">
+    <div className="text-black  p-1 flex justify-between md:mx-16">
       <div>
         <div className="border border-gray-700  rounded-full p-2 bg-gray-700">
           <TbNorthStar className="text-white text-3xl" />
