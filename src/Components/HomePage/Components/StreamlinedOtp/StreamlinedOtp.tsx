@@ -7,7 +7,7 @@ const StreamlinedOtp = () => {
         <div className="text-black font-SpaceMono text-4xl font-bold italic">
           Streamlined OTP Delivery
         </div>
-        <div className="text-sm text-gray-500">
+        <div className=" text-gray-500">
           Effortlessly send one-time passwords to your users' Gmail accounts
           with our user-friendly platform
         </div>
@@ -17,7 +17,7 @@ const StreamlinedOtp = () => {
           <img src="assets/streamLine.jpg" className=" rounded-4xl" />
         </div>
         <div className=" flex flex-col flex-1 bg-[#f3e5dc] rounded-4xl p-14  gap-10">
-          <div className="text-2xl font-bold text-black">
+          <div className="text-3xl font-bold text-black">
             Efficient OTP Delivery
           </div>
           <div className="text-lg text-gray-600">
