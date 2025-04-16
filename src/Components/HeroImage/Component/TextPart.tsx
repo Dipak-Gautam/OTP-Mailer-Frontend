@@ -1,6 +1,5 @@
-import React from "react";
-import GetStarted from "../../Buttons/GetStarted/GetStarted";
 import WhiteButton from "../../Buttons/WhiteButton/WhiteButton";
+import OrangeButton from "../../Buttons/GetStarted/GetStarted";
 
 const TextPart = () => {
   return (
@@ -19,7 +18,7 @@ const TextPart = () => {
       </div>
 
       <div className="flex gap-3">
-        <GetStarted />
+        <OrangeButton title="Get Started" />
         <WhiteButton title="Learn More" />
       </div>
     </div>
