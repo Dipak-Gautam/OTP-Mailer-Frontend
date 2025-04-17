@@ -12,7 +12,7 @@ const SecureOtp = () => {
         Secure Otp
       </div>
       <div className="flex w-full justify-end mb-14 ">
-        <div className="w-[45%]  text-gray-100 text-lg font-medium flex flex-col gap-14 px-10">
+        <div className="w-[45%]  text-gray-200 text-xl font-medium flex flex-col gap-14 px-10">
           <div className="text-white text-4xl text-center font-semibold font-SpaceMono italic">
             Customizable Email
           </div>

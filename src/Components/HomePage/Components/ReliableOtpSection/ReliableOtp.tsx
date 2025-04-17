@@ -8,7 +8,7 @@ const ReliableOtp = () => {
         <div className="text-black  font-SpaceMono italic font-bold text-4xl">
           Reliable OTP
         </div>
-        <div className="text-lg font-medium text-gray-600 pr-28">
+        <div className="text-xl font-medium text-gray-400 pr-28">
           Trust OTP-Mailer to deliver your one-time passwords with speed and
           accuracy. Our robust infrastructure and security protocols safeguard
           your user data

@@ -7,7 +7,7 @@ const StreamlinedOtp = () => {
         <div className="text-black font-SpaceMono text-4xl font-bold italic">
           Streamlined OTP Delivery
         </div>
-        <div className=" text-gray-500">
+        <div className=" text-gray-400 font-medium">
           Effortlessly send one-time passwords to your users' Gmail accounts
           with our user-friendly platform
         </div>
@@ -20,12 +20,12 @@ const StreamlinedOtp = () => {
           <div className="text-2xl font-bold text-black">
             Efficient OTP Delivery
           </div>
-          <div className="text-base text-gray-600">
+          <div className="text-xl font-medium text-gray-500">
             Our intuitive dashboard allows you to manage your OTP campaigns with
             ease. Track delivery status, monitor user interactions, and gain
             valuable insights to optimize your communication strategies
           </div>
-          <div className="text-base text-gray-600">
+          <div className="text-xl font-medium text-gray-500">
             Discover the full range of features and capabilities that OTP-Mailer
             offers, designed to streamline your one-time password delivery and
             enhance the user experience
