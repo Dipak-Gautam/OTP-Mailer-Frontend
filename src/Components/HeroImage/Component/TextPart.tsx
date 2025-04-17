@@ -1,5 +1,5 @@
 import WhiteButton from "../../Buttons/WhiteButton/WhiteButton";
-import OrangeButton from "../../Buttons/GetStarted/GetStarted";
+import OrangeButton from "../../Buttons/OrangeButton/OrangeButton";
 
 const TextPart = () => {
   return (

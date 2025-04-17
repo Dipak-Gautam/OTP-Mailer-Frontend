@@ -1,5 +1,5 @@
 import React from "react";
-import OrangeButton from "../../../Buttons/GetStarted/GetStarted";
+import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
 
 const ReliableOtp = () => {
   return (
@@ -13,8 +13,11 @@ const ReliableOtp = () => {
           accuracy. Our robust infrastructure and security protocols safeguard
           your user data
         </div>
-        <div>
+        <div className="flex items-center gap-5">
           <OrangeButton title="Send Now" />
+          <div className="text-[#f8663f] hover:text-orange-400 font-semibold underline">
+            Learn More
+          </div>
         </div>
       </div>
       <div>

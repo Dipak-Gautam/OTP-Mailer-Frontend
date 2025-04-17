@@ -1,4 +1,4 @@
-import OrangeButton from "../../../Buttons/GetStarted/GetStarted";
+import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
 
 const SecureOtp = () => {
   return (
