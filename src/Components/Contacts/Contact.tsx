@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 const Contact = () => {
   return (
-    <div className=" mt-4">
+    <div className=" mt-4 ">
       <Navbar />
       <Footer />
     </div>
