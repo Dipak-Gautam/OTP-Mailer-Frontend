@@ -6,7 +6,7 @@ interface WhiteButtonProp {
 
 const WhiteButton = ({ title }: WhiteButtonProp) => {
   return (
-    <div className="bg-white w-fit p-2 px-4 font-sans font-semibold rounded-md text-gray-500 hover:text-gray-800">
+    <div className="bg-white w-fit p-2 px-4 font-sans font-semibold rounded-md text-gray-500 hover:text-gray-800 cursor-pointer">
       {title}
     </div>
   );

@@ -13,7 +13,7 @@ const LinkOptions = () => {
         </div>
         <div className="flex gap-2 items-center cursor-pointer  hover:text-blue-400">
           <BiSend />
-          About
+          Docs
         </div>
         <div className="flex gap-2 items-center cursor-pointer  hover:text-blue-400">
           <BiSend />
