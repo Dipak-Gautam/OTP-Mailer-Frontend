@@ -7,12 +7,12 @@ import { FaLinkedin } from "react-icons/fa6";
 const HeroImage = () => {
   return (
     <div className="flex flex-col flex-1 p-5 ">
-      <div className="text-2xl md:text-5xl font-medium text-text  font-poppins text-center my-12 ">
+      <div className="text-2xl md:text-5xl  text-black  font-SpaceMono text-center my-12 italic font-bold ">
         About Me
       </div>
       <div className="flex p-5 font-lexend text-gray-500 font-medium ">
         <div className=" flex flex-col flex-1 p-5 gap-7 justify-center ">
-          <div className=" text-text text-2xl md:text-4xl lg:text-7xl font-poppins  font-medium ">
+          <div className="  text-2xl md:text-4xl lg:text-7xl font-SpaceMono  font-semibold text-black italic ">
             Full Stack <p>Developer</p>
           </div>
           <div className=" text-gray-500 text-sm lg:text-xl ">
