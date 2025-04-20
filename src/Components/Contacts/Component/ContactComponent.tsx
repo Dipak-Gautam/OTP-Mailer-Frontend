@@ -33,7 +33,7 @@ const ContactComponent = () => {
         }}
       >
         <div className="border rounded-lg border-slate-3 shadow-md p-3 md:p-5 xl:w-[40%] md:mr-6 md:mt-6 backdrop-blur-3xl ">
-          <div className="text-lg font-semibold font-SpaceMono  ">
+          <div className="text-lg font-semibold font-SpaceMono text-orange-400 ">
             Get In Touch
           </div>
           <div className="text-center font-SpaceMono text-black text-4xl font-semibold my-3 italic">
