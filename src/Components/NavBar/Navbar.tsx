@@ -2,8 +2,9 @@ import React from "react";
 import { TbNorthStar } from "react-icons/tb";
 import LoginButton from "../Buttons/Login/LoginButton";
 import Options from "./Components/Options";
+import { loginModalProp } from "../HeroImage/HeroImage";
 
-const Navbar = () => {
+const Navbar = ({ setShowModal }: loginModalProp) => {
   return (
     <div className="text-black  p-1 flex justify-between md:mx-16">
       <div>
@@ -15,7 +16,7 @@ const Navbar = () => {
         <Options />
 
         <div className="flex justify-center items-center">
-          <LoginButton />
+          <LoginButton onClick={() => setShowModal(true)} />
         </div>
       </div>
     </div>
