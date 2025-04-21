@@ -5,6 +5,7 @@ import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { GiHouseKeys } from "react-icons/gi";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
 const DashNav = () => {
   return (
@@ -25,29 +26,41 @@ const DashNav = () => {
             <div className="text-black font-medium">Dashboard</div>
           </div>
 
-          <div className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer">
+          <NavLink
+            to={"configuration"}
+            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+          >
             <MdOutlineDesignServices className="text-2xl" />
             <div className="text-black font-medium">Configuration</div>
-          </div>
+          </NavLink>
         </div>
 
         <div className=" border border-b border-gray-500" />
 
         <div className="my-8 space-y-5">
-          <div className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer">
+          <NavLink
+            to={"docs"}
+            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+          >
             <PiBookOpenTextLight className="text-2xl" />
             <div className="text-black font-medium">Documentation</div>
-          </div>
+          </NavLink>
 
-          <div className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer">
+          <NavLink
+            to={"contact"}
+            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+          >
             <TbDeviceLandlinePhone className="text-2xl" />
             <div className="text-black font-medium">Contact</div>
-          </div>
+          </NavLink>
 
-          <div className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer">
+          <NavLink
+            to={"account"}
+            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+          >
             <GiHouseKeys className="text-2xl" />
             <div className="text-black font-medium">Account & ApiKey</div>
-          </div>
+          </NavLink>
         </div>
       </div>
 
