@@ -21,14 +21,26 @@ const DashNav = () => {
 
       <div className="flex-1">
         <div className="my-8  space-y-5">
-          <div className="flex items-center gap-4 text-xl bg-[#f8d3bb] p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer">
+          <NavLink
+            to={"/dashboard"}
+            end
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
+          >
             <MdDashboard className="text-2xl" />
             <div className="text-black font-medium">Dashboard</div>
-          </div>
+          </NavLink>
 
           <NavLink
             to={"configuration"}
-            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
           >
             <MdOutlineDesignServices className="text-2xl" />
             <div className="text-black font-medium">Configuration</div>
@@ -40,7 +52,11 @@ const DashNav = () => {
         <div className="my-8 space-y-5">
           <NavLink
             to={"docs"}
-            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
           >
             <PiBookOpenTextLight className="text-2xl" />
             <div className="text-black font-medium">Documentation</div>
@@ -48,7 +64,11 @@ const DashNav = () => {
 
           <NavLink
             to={"contact"}
-            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
           >
             <TbDeviceLandlinePhone className="text-2xl" />
             <div className="text-black font-medium">Contact</div>
@@ -56,7 +76,11 @@ const DashNav = () => {
 
           <NavLink
             to={"account"}
-            className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
           >
             <GiHouseKeys className="text-2xl" />
             <div className="text-black font-medium">Account & ApiKey</div>
