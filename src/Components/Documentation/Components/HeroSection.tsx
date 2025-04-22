@@ -1,4 +1,3 @@
-import React from "react";
 import OrangeButton from "../../Buttons/OrangeButton/OrangeButton";
 
 const HeroSection = () => {
@@ -22,7 +21,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="w-[50%]">
-        <img src="assets/Docs.jpeg" />
+        <img src="/assets/Docs.jpeg" />
       </div>
     </div>
   );

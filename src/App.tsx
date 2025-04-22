@@ -6,6 +6,8 @@ import DashboardMain from "./Components/DashBoard/DashboardMain";
 import Dashboard from "./Components/DashBoard/Component/Dashboard/Dashboard";
 import Configuration from "./Components/DashBoard/Component/Configuration/Configuration";
 import AccountApi from "./Components/DashBoard/Component/AccountApi/Account&Api";
+import DashContact from "./Components/DashBoard/Component/DashContact/DashContact";
+import DashDocumentation from "./Components/DashBoard/Component/DashDocumentation/DashDocumentation";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +28,8 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       { path: "configuration", element: <Configuration /> },
-      { path: "docs", element: <Documentation /> },
-      { path: "contact", element: <Contact /> },
+      { path: "docs", element: <DashDocumentation /> },
+      { path: "contact", element: <DashContact /> },
       { path: "account", element: <AccountApi /> },
     ],
   },
