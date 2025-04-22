@@ -36,7 +36,7 @@ const HeroImage = () => {
           </div>
         </div>
         <div className=" w-[40%] hidden md:flex justify-end">
-          <img src="/assets/Contact/working-robot.png" className="w-[500px] " />
+          <img src="/assets/Contact/contact-image.jpg" className="w-[500px] " />
         </div>
       </div>
     </div>
