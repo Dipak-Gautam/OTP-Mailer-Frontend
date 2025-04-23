@@ -71,7 +71,7 @@ const LoginPage = ({ setSelector }: ILoginPageProp) => {
           onClick={() => setSelector("register")}
         >
           Register
-        </span>{" "}
+        </span>
       </div>
     </div>
   );

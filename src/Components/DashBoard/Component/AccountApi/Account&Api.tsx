@@ -1,5 +1,6 @@
 import React from "react";
 import ApiKey from "./Component/ApiKey";
+import AccountSetting from "./Component/AccountSetting";
 
 const AccountApi = () => {
   return (
@@ -7,8 +8,9 @@ const AccountApi = () => {
       <div className="text-4xl font-SpaceMono italic font-bold ">
         Account Management
       </div>
-      <div className="my-7">
+      <div className="my-7 space-y-10">
         <ApiKey />
+        <AccountSetting />
       </div>
     </div>
   );

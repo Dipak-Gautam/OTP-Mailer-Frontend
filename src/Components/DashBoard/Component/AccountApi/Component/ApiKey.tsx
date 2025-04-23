@@ -8,7 +8,7 @@ const ApiKey = () => {
       </div>
       <div className="flex gap-8 ">
         <div className="flex-1 flex flex-col gap-4 justify-center">
-          <div className="font-lg text-gray-500 font-medium">
+          <div className=" text-gray-500 font-medium">
             Treat api key like a password—keep it safe and do not share it.
           </div>
           <div className="bg-[#f7f7f7] font-lg text-gray-600 font-medium p-4 rounded-lg">
@@ -16,7 +16,7 @@ const ApiKey = () => {
           </div>
         </div>
         <div className="w-[40%] flex flex-col gap-4">
-          <div className="text-xl text-gray-900 font-SpaceMono italic font-bold text-center">
+          <div className="text-2xl text-gray-900 font-SpaceMono italic font-bold text-center">
             Api Key
           </div>
           <div className="text-gray-500 font-medium text-lg">
