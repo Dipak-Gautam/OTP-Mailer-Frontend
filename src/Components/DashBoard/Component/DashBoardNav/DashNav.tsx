@@ -34,7 +34,7 @@ const DashNav = () => {
             <div className="text-black font-medium">Dashboard</div>
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to={"configuration"}
             className={({ isActive }) =>
               isActive
@@ -44,7 +44,7 @@ const DashNav = () => {
           >
             <MdOutlineDesignServices className="text-2xl" />
             <div className="text-black font-medium">Configuration</div>
-          </NavLink>
+          </NavLink> */}
         </div>
 
         <div className=" border border-b border-gray-500" />
