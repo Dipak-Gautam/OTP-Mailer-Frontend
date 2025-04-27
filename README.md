@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+OTP Mailer
+A React + TypeScript + Vite web application for sending OTPs via email with a simple API call.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Send OTPs to verify user emails easily.
 
-Currently, two official plugins are available:
+Choose from the provided email template or use your own custom template.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fast, lightweight, and developer-friendly.
 
-## Expanding the ESLint configuration
+Tech Stack
+Frontend: React.js, TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Build Tool: Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Getting Started
+Prerequisites
+Node.js (>= 16)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm or yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Installation
+Clone the repository:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+bash
+Copy code
+git clone https://github.com/your-username/otp-mailer.git
+cd otp-mailer
+Install dependencies:
+
+bash
+Copy code
+npm install
+# or
+yarn
+Running the Application
+Start the development server:
+
+bash
+Copy code
+npm run dev
+# or
+yarn dev
+The app will be available at http://localhost:5173.
+
+Build for Production
+bash
+Copy code
+npm run build
+# or
+yarn build
+Usage
+You can send OTPs with a simple API call:
+
+http
+Copy code
+POST /api/send-otp
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "template": "default", // or "custom"
+  "otp": "123456"
+}
+email — The recipient's email address.
+
+template — (optional) Choose between the default template or provide your own custom HTML template.
+
+otp — The OTP code to be sent.
+
+Custom Email Template
+To use your own template:
+
+Provide your HTML in the API call payload.
+
+Include the placeholder {{otp}} where you want the OTP to appear.
