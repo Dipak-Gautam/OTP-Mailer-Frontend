@@ -18,12 +18,12 @@ const TemplateSetting = () => {
 
   return (
     <div className="flex-1">
-      <div className="font-SpaceMono text-xl italic font-bold text-center mb-5">
+      <div className="font-SpaceMono text-xl italic font-bold text-center mb-4">
         Configure the Color
       </div>
       <div className="border rounded-md border-gray-500 pb-3">
         <div className="flex justify-between mt-2 items-center px-5 pb-3 border-b border-gray-300">
-          <div className="flex flex-col gap-2   ">
+          <div className="flex flex-col gap-1   ">
             <label htmlFor="titleColor">Title Color</label>
             <input
               className="rounded-md"
@@ -33,7 +33,7 @@ const TemplateSetting = () => {
               onChange={(e) => setTitleColor(e.target.value)}
             />
           </div>
-          <div className="flex flex-col gap-2 items-end">
+          <div className="flex flex-col gap-1 items-end">
             <label htmlFor="titleBackgroundColor">Title Background Color</label>
             <input
               className="rounded-md"
@@ -45,7 +45,7 @@ const TemplateSetting = () => {
           </div>
         </div>
         <div className="flex gap-4 mt-2 justify-between px-5 pb-4 border-b border-gray-300">
-          <div className="flex flex-col gap-2 j">
+          <div className="flex flex-col gap-1 j">
             <label htmlFor="optColor">OTP Color</label>
             <input
               className="rounded-md"
@@ -55,7 +55,7 @@ const TemplateSetting = () => {
               onChange={(e) => setOptColor(e.target.value)}
             />
           </div>
-          <div className="flex flex-col gap-2 justify-center items-center">
+          <div className="flex flex-col gap-1 justify-center items-center">
             <label htmlFor="optBackgroundColor">OTP Background Color</label>
             <input
               className="rounded-md"
@@ -65,7 +65,7 @@ const TemplateSetting = () => {
               onChange={(e) => setOptBackgroundColor(e.target.value)}
             />
           </div>
-          <div className="flex flex-col gap-2  items-end">
+          <div className="flex flex-col gap-1  items-end">
             <label htmlFor="otpBorderColor">OTP Border Color</label>
             <input
               className="rounded-md"
@@ -79,7 +79,7 @@ const TemplateSetting = () => {
 
         <div>
           <div className="flex gap-4 mt-2 justify-between px-5 pb-3 border-b border-gray-300">
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-1 ">
               <label htmlFor="bodyColor">Body Color</label>
               <input
                 className="rounded-md"
@@ -89,7 +89,7 @@ const TemplateSetting = () => {
                 onChange={(e) => setBodyColor(e.target.value)}
               />
             </div>
-            <div className="flex flex-col gap-2 justify-center items-end">
+            <div className="flex flex-col gap-1 justify-center items-end">
               <label htmlFor="bodyBackgroundColor">Body Background Color</label>
               <input
                 className="rounded-md"
@@ -101,7 +101,7 @@ const TemplateSetting = () => {
             </div>
           </div>
           <div className="flex gap-4 mt-2 justify-between px-5  border-gray-300">
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-1 ">
               <label htmlFor="footerColor">Footer Color</label>
               <input
                 className="rounded-md"
@@ -111,7 +111,7 @@ const TemplateSetting = () => {
                 onChange={(e) => setFooterColor(e.target.value)}
               />
             </div>
-            <div className="flex flex-col gap-2 justify-center items-end">
+            <div className="flex flex-col gap-1 justify-center items-end">
               <label htmlFor="footerBackgroundColor">
                 Footer Background Color
               </label>
