@@ -2,11 +2,11 @@ import EmailConfiguration from "./EmailConfiguration/EmailConfiguration";
 
 const Dashboard = () => {
   return (
-    <div className="p-8">
+    <div className="p-8 h-[100vh] overflow-y-auto">
       <div className="text-xl font-SpaceMono font-bold italic mb-8">
-        Template Configuration
+        Dashboard
       </div>
-      <div>
+      <div className=" ">
         <EmailConfiguration />
       </div>
     </div>

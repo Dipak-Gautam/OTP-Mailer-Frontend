@@ -4,9 +4,11 @@ import TemplateSetting from "./Components/TemplateSetting";
 
 const EmailConfiguration = () => {
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-10 h-full">
       <Template />
-      <TemplateSetting />
+      <div className="h-full  flex-1">
+        <TemplateSetting />
+      </div>
     </div>
   );
 };
