@@ -28,7 +28,7 @@ const Template = () => {
   }, []);
 
   return (
-    <div className="w-[50%]">
+    <div className="">
       <div className="font-SpaceMono text-xl italic font-bold text-center mb-5">
         Configure the email
       </div>
