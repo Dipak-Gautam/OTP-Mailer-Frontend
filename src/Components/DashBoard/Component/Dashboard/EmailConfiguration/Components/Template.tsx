@@ -1,6 +1,27 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const Template = () => {
+interface TemplateProps {
+  titleColor: string;
+  titleBackgroundColor: string;
+  optColor: string;
+  optBackgroundColor: string;
+  otpBorderColor: string;
+  bodyColor: string;
+  bodyBackgroundColor: string;
+  footerColor: string;
+  footerBackgroundColor: string;
+}
+
+const Template = ({
+  titleColor,
+  titleBackgroundColor,
+  otpBorderColor,
+  optColor,
+  bodyBackgroundColor,
+  footerColor,
+  footerBackgroundColor,
+  optBackgroundColor,
+}: TemplateProps) => {
   const [title, setTitle] = useState("Verify your Email");
   const [firstParagraph, setFirstParagraph] = useState(
     "Hello \nThank you for signing up! Please confirm your email address by entering the code below:"
@@ -26,6 +47,7 @@ const Template = () => {
     autoResize(firstParagraphRef);
     autoResize(afterParagraphRef);
   }, []);
+  console.log("titleBackgroundColor", titleBackgroundColor);
 
   return (
     <div className="">
@@ -33,7 +55,13 @@ const Template = () => {
         Configure the email
       </div>
       <div className="border rounded-lg overflow-hidden border-gray-300">
-        <div className="bg-green-400 text-white font-bold text-3xl text-center p-3">
+        <div
+          style={{
+            backgroundColor: titleBackgroundColor,
+            color: titleColor,
+          }}
+          className={` font-bold text-3xl text-center p-3`}
+        >
           <input
             ref={titleRef}
             value={title}
@@ -54,8 +82,19 @@ const Template = () => {
             className="border-none outline-none bg-transparent w-full resize-none overflow-hidden"
           />
 
-          <div className="bg-[#e8f5e9] p-3 border border-dashed border-green-500 rounded-md">
-            <div className="text-center text-2xl font-bold text-green-600">
+          <div
+            style={{
+              backgroundColor: optBackgroundColor,
+              borderColor: otpBorderColor,
+            }}
+            className=" p-3 border border-dashed rounded-md"
+          >
+            <div
+              style={{
+                color: optColor,
+              }}
+              className="text-center text-2xl font-bold text-green-600"
+            >
               123456
             </div>
           </div>
@@ -71,7 +110,13 @@ const Template = () => {
             />
           </div>
         </div>
-        <div className="bg-[#f4f4f4] text-center p-3 text-xs text-gray-500 font-medium">
+        <div
+          style={{
+            backgroundColor: footerBackgroundColor,
+            color: footerColor,
+          }}
+          className=" text-center p-3 text-xs  font-medium"
+        >
           © 2025 Dipak Gautam. All rights reserved.
         </div>
       </div>
