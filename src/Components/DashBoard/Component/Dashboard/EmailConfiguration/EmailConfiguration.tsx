@@ -37,7 +37,26 @@ const EmailConfiguration = () => {
       </div>
 
       <div className="h-full  flex-1 space-y-5">
-        <TemplateSetting />
+        <TemplateSetting
+          titleColor={titleColor}
+          titleBackgroundColor={titleBackgroundColor}
+          bodyBackgroundColor={bodyBackgroundColor}
+          bodyColor={bodyColor}
+          footerBackgroundColor={footerBackgroundColor}
+          footerColor={footerColor}
+          optBackgroundColor={optBackgroundColor}
+          optColor={optColor}
+          otpBorderColor={otpBorderColor}
+          setBodyBackgroundColor={setBodyBackgroundColor}
+          setBodyColor={setBodyColor}
+          setFooterBackgroundColor={setFooterBackgroundColor}
+          setFooterColor={setFooterColor}
+          setOptBackgroundColor={setOptBackgroundColor}
+          setOptColor={setOptColor}
+          setOtpBorderColor={setOtpBorderColor}
+          setTitleColor={setTitleColor}
+          setTitleBackgroundColor={setTitleBackgroundColor}
+        />
         <PreBuildTemplates />
       </div>
     </div>

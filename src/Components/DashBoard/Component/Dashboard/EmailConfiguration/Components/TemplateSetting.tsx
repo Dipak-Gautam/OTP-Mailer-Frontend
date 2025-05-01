@@ -1,21 +1,46 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
-const TemplateSetting = () => {
-  const [titleColor, setTitleColor] = React.useState("#4caf50");
-  const [titleBackgroundColor, setTitleBackgroundColor] =
-    React.useState("#4caf50");
-  const [optColor, setOptColor] = React.useState("#4caf50");
-  const [optBackgroundColor, setOptBackgroundColor] = React.useState("#e8f5e9");
-  const [otpBorderColor, setOtpBorderColor] = React.useState("#4caf50");
+interface TemplateSettingProps {
+  setTitleColor: Dispatch<SetStateAction<string>>;
+  setTitleBackgroundColor: Dispatch<SetStateAction<string>>;
+  setOptColor: Dispatch<SetStateAction<string>>;
+  setBodyColor: Dispatch<SetStateAction<string>>;
+  setBodyBackgroundColor: Dispatch<SetStateAction<string>>;
+  setOtpBorderColor: Dispatch<SetStateAction<string>>;
+  setFooterColor: Dispatch<SetStateAction<string>>;
+  setFooterBackgroundColor: Dispatch<SetStateAction<string>>;
+  setOptBackgroundColor: Dispatch<SetStateAction<string>>;
+  titleBackgroundColor: string;
+  titleColor: string;
+  optBackgroundColor: string;
+  optColor: string;
+  otpBorderColor: string;
+  bodyBackgroundColor: string;
+  footerBackgroundColor: string;
+  footerColor: string;
+  bodyColor: string;
+}
 
-  const [bodyColor, setBodyColor] = React.useState("#000000");
-  const [bodyBackgroundColor, setBodyBackgroundColor] =
-    React.useState("#ffffff");
-
-  const [footerColor, setFooterColor] = React.useState("#000000");
-  const [footerBackgroundColor, setFooterBackgroundColor] =
-    React.useState("#ffffff");
-
+const TemplateSetting = ({
+  setBodyBackgroundColor,
+  setBodyColor,
+  setFooterBackgroundColor,
+  setFooterColor,
+  setOptBackgroundColor,
+  setOptColor,
+  setOtpBorderColor,
+  setTitleBackgroundColor,
+  setTitleColor,
+  titleBackgroundColor,
+  titleColor,
+  optBackgroundColor,
+  optColor,
+  otpBorderColor,
+  bodyBackgroundColor,
+  footerBackgroundColor,
+  footerColor,
+  bodyColor,
+}: TemplateSettingProps) => {
   return (
     <div className="flex-1">
       <div className="font-SpaceMono text-xl italic font-bold text-center mb-4">

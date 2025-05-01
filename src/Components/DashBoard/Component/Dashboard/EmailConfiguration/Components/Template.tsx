@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-interface TemplateProps {
+export interface TemplateProps {
   titleColor: string;
   titleBackgroundColor: string;
   optColor: string;
@@ -21,6 +21,7 @@ const Template = ({
   footerColor,
   footerBackgroundColor,
   optBackgroundColor,
+  bodyColor,
 }: TemplateProps) => {
   const [title, setTitle] = useState("Verify your Email");
   const [firstParagraph, setFirstParagraph] = useState(
@@ -71,7 +72,10 @@ const Template = ({
             className="border-none outline-none bg-transparent w-full text-center resize-none overflow-hidden"
           />
         </div>
-        <div className="p-7 space-y-6 text-sm">
+        <div
+          className="p-7 space-y-6 text-sm"
+          style={{ background: bodyBackgroundColor, color: bodyColor }}
+        >
           <textarea
             ref={firstParagraphRef}
             value={firstParagraph}
