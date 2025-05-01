@@ -10,6 +10,14 @@ export interface TemplateProps {
   bodyBackgroundColor: string;
   footerColor: string;
   footerBackgroundColor: string;
+  title: string;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+  firstParagraph: string;
+  setFirstParagraph: React.Dispatch<React.SetStateAction<string>>;
+  afterParagraph: string;
+  setAfterParagraph: React.Dispatch<React.SetStateAction<string>>;
+  footer: string;
+  setFooter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Template = ({
@@ -22,15 +30,15 @@ const Template = ({
   footerBackgroundColor,
   optBackgroundColor,
   bodyColor,
+  title,
+  setTitle,
+  firstParagraph,
+  setFirstParagraph,
+  afterParagraph,
+  setAfterParagraph,
+  footer,
+  setFooter,
 }: TemplateProps) => {
-  const [title, setTitle] = useState("Verify your Email");
-  const [firstParagraph, setFirstParagraph] = useState(
-    "Hello \nThank you for signing up! Please confirm your email address by entering the code below:"
-  );
-  const [afterParagraph, setAfterParagraph] = useState(
-    "If you did not create an account, no further action is required. If you have any questions, feel free to contact our support team."
-  );
-
   const titleRef = useRef(null);
   const firstParagraphRef = useRef(null);
   const afterParagraphRef = useRef(null);
@@ -48,7 +56,6 @@ const Template = ({
     autoResize(firstParagraphRef);
     autoResize(afterParagraphRef);
   }, []);
-  console.log("titleBackgroundColor", titleBackgroundColor);
 
   return (
     <div className="">
