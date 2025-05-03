@@ -10,7 +10,7 @@ const Documentation = () => {
   return (
     <div className="pt-4">
       <Navbar setShowModal={setShowModal} />
-      <HeroSection />
+      <HeroSection setShowModal={setShowModal} />
       <UsageSection />
       <Footer />
       <Login open={openModal} close={() => setShowModal(false)} />
