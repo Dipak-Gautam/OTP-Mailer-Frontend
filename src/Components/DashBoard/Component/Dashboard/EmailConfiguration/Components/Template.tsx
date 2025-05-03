@@ -62,6 +62,12 @@ const Template = ({
       <div className="font-SpaceMono text-xl italic font-bold text-center mb-5">
         Configure the email
       </div>
+      <div className="flex gap-2 my-5 items-center mx-3">
+        <div className="text-lg font-medium ">Subject :</div>
+        <div className="flex-1">
+          <input className="border border-gray-400 rounded-md p-1 text-sm px-3 w-full" />
+        </div>
+      </div>
       <div className="border rounded-lg overflow-hidden border-gray-300">
         <div
           style={{

@@ -39,7 +39,7 @@ const SaveModel = ({ open, onClose }: SaveModelProps) => {
           />
         </div>
         <div className="text-xs  italic text-red-400">
-          First save the configuration to send updated the test mail.
+          First save the configuration to send the updated test mail.
         </div>
 
         <div className="flex justify-center items-center bg-orange-400 hover:bg-orange-500 text-white rounded-md p-2 font-semibold  cursor-pointer ">
