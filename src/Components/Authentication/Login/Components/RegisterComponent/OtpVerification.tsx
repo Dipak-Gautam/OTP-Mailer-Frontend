@@ -46,7 +46,7 @@ const OtpVerification = ({ setRegisterStage }: OtpVerificationProp) => {
       </div>
       <div
         onClick={() => setRegisterStage(3)}
-        className="bg-slate-600 text-white font-lexend font-medium p-2 text-center  my-6 rounded-md hover:bg-slate-800 cursor-pointer"
+        className="bg-orange-400 hover:bg-orange-500 text-white font-lexend font-medium p-2 text-center  my-6 rounded-md  cursor-pointer"
       >
         Verify
       </div>

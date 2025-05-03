@@ -54,10 +54,13 @@ const LoginPage = ({ setSelector }: ILoginPageProp) => {
 
       <div className=" text-white font-lexend font-medium  text-center  mt-6 rounded-md hover:bg-slate-800 cursor-pointer overflow-hidden">
         {isSubmitting ? (
-          <div className="flex-1 border p-2 bg-slate-500"> Submitting</div>
+          <div className="flex-1 border p-2 bg-orange-400 hover:bg-orange-500">
+            {" "}
+            Submitting
+          </div>
         ) : (
           <div
-            className="flex-1 border p-2 bg-slate-600"
+            className="flex-1 border p-2 bg-orange-400 hover:bg-orange-500"
             onClick={handleSubmit(onSubmit)}
           >
             Login

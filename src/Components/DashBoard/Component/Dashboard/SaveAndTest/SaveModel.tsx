@@ -17,16 +17,16 @@ const SaveModel = ({ open, onClose }: SaveModelProps) => {
       onClick={onClose}
     >
       <div
-        className={` bg-white/50 border border-white rounded-xl p-4 px-8 backdrop-blur-xs w-[30%] flex flex-col gap-4 overflow-hidden shadow-xl shadow-slate-500/50 m-8 transition-all  duration-500 ${
+        className={` bg-white/50 border border-white rounded-xl p-4 px-8 backdrop-blur-xs w-96 flex flex-col gap-4 overflow-hidden shadow-xl shadow-slate-500/50 m-8 transition-all  duration-500 ${
           open ? "scale-100 opacity-100" : "scale-125 opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className="flex justify-center items-center px-4 py-2 font-sans font-semibold absolute top-0.5 right-0.5 bg-orange-400 rounded-tr-xl rounded-bl-xl cursor-pointer hover:bg-orange-500 "
+          className="flex justify-center items-center px-2 py-2 font-sans font-semibold absolute top-0.5 right-0.5 bg-orange-400 rounded-tr-xl rounded-bl-xl cursor-pointer hover:bg-orange-500 "
           onClick={onClose}
         >
-          <IoClose size={23} color="white" />
+          <IoClose className="text-xl text-white" />
         </div>
         <div className="text-center font-SpaceMono text-xl italic font-bold">
           Send Test Mail

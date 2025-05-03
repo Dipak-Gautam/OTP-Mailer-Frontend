@@ -67,10 +67,13 @@ const SetPassword = ({ registerData }: SetPasswordProp) => {
         className=" text-white font-lexend font-medium  text-center  mt-6 rounded-md hover:bg-slate-800 cursor-pointer"
       >
         {isSubmitting ? (
-          <div className="p-2 flex-1 bg-slate-700"> Submitting</div>
+          <div className="p-2 flex-1 bg-orange-400 hover:bg-orange-500">
+            {" "}
+            Submitting
+          </div>
         ) : (
           <div
-            className="p-2 flex-1 bg-slate-600"
+            className="p-2 flex-1 bg-orange-400 hover:bg-orange-500"
             onClick={handleSubmit(onSubmit)}
           >
             Submit

@@ -51,7 +51,7 @@ const RegisterPage = ({
       </div>
       <div
         onClick={handleSubmit(onSubmit)}
-        className="bg-slate-600 text-white font-lexend font-medium p-2 text-center  mt-6 rounded-md hover:bg-slate-800 cursor-pointer"
+        className="bg-orange-400 hover:bg-orange-500 text-white font-lexend font-medium p-2 text-center  mt-6 rounded-md cursor-pointer"
       >
         Register
       </div>

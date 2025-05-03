@@ -30,7 +30,7 @@ const Login = ({ open, close }: LoginProp) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className="border absolute bg-slate-700 right-0 rounded-bl-xl p-2 hover:bg-slate-800 cursor-pointer"
+          className=" absolute bg-orange-400 right-0 rounded-bl-xl p-2 hover:bg-orange-500 cursor-pointer"
           onClick={() => {
             close();
             setRegisterStage(1);
