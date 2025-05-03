@@ -1,7 +1,8 @@
 import WhiteButton from "../../Buttons/WhiteButton/WhiteButton";
 import OrangeButton from "../../Buttons/OrangeButton/OrangeButton";
+import { loginModalProp } from "../HeroImage";
 
-const TextPart = () => {
+const TextPart = ({ setShowModal }: loginModalProp) => {
   return (
     <div className=" flex flex-col justify-center w-[50%] space-y-14 px-6 font-semibold text-gray-600 text-lg">
       <div className="font-SpaceMono text-4xl font-bold  px-5 whitespace-break-spaces leading-14 italic text-black">
@@ -18,7 +19,7 @@ const TextPart = () => {
       </div>
 
       <div className="flex gap-3">
-        <OrangeButton title="Get Started" />
+        <OrangeButton title="Get Started" onClick={() => setShowModal(true)} />
         <WhiteButton title="Learn More" />
       </div>
     </div>

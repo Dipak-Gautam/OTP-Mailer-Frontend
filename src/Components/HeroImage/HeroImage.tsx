@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import Navbar from "../NavBar/Navbar";
 import TextPart from "./Component/TextPart";
+
 export interface loginModalProp {
   setShowModal: Dispatch<SetStateAction<boolean>>;
 }
@@ -15,7 +16,7 @@ const HeroImage = ({ setShowModal }: loginModalProp) => {
         </div>
       </div>
       <div className="flex justify-between px-10">
-        <TextPart />
+        <TextPart setShowModal={setShowModal} />
         <div className="w-[50%] flex justify-center">
           <img src="assets/Hero-Image.jpg" className="w-[35vw]" />
         </div>

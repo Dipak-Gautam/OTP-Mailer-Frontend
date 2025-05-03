@@ -13,9 +13,9 @@ const HomePage = () => {
     <div>
       <HeroImage setShowModal={setShowModal} />
       <StreamlinedOtp />
-      <SecureOtp />
-      <ReliableOtp />
-      <ApiDriven />
+      <SecureOtp setShowModal={setShowModal} />
+      <ReliableOtp setShowModal={setShowModal} />
+      <ApiDriven setShowModal={setShowModal} />
       <Footer />
       <Login open={openModal} close={() => setShowModal(false)} />
     </div>

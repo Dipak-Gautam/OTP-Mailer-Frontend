@@ -1,7 +1,8 @@
 import React from "react";
 import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
+import { loginModalProp } from "../../../HeroImage/HeroImage";
 
-const ReliableOtp = () => {
+const ReliableOtp = ({ setShowModal }: loginModalProp) => {
   return (
     <div className="flex mx-20 my-14 gap-16">
       <div className="flex flex-col justify-center gap-8 px-8">
@@ -14,7 +15,7 @@ const ReliableOtp = () => {
           your user data
         </div>
         <div className="flex items-center gap-5">
-          <OrangeButton title="Send Now" />
+          <OrangeButton title="Send Now" onClick={() => setShowModal(true)} />
           <div className="text-[#f8663f] hover:text-orange-400 font-semibold underline">
             Learn More
           </div>

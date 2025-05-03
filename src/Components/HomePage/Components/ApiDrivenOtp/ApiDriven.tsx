@@ -1,6 +1,7 @@
 import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
+import { loginModalProp } from "../../../HeroImage/HeroImage";
 
-const ApiDriven = () => {
+const ApiDriven = ({ setShowModal }: loginModalProp) => {
   return (
     <div className="mx-20 py-20">
       <div className="flex flex-col items-center text-lg font-medium text-gray-400 gap-3">
@@ -28,7 +29,10 @@ const ApiDriven = () => {
             with a secure and convenient way to access their accounts
           </div>
           <div>
-            <OrangeButton title="Get Started" />
+            <OrangeButton
+              title="Get Started"
+              onClick={() => setShowModal(true)}
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
+import { loginModalProp } from "../../../HeroImage/HeroImage";
 
-const SecureOtp = () => {
+const SecureOtp = ({ setShowModal }: loginModalProp) => {
   return (
     <div
       className="mx-20 my-24 p-5 py-20 rounded-3xl  bg-cover bg-no-repeat"
@@ -28,7 +29,10 @@ const SecureOtp = () => {
             appealing and on-brand
           </div>
           <div className="">
-            <OrangeButton title="Get Started" />
+            <OrangeButton
+              title="Get Started"
+              onClick={() => setShowModal(true)}
+            />
           </div>
         </div>
       </div>
