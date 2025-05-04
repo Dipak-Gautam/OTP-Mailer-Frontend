@@ -17,7 +17,7 @@ const HeroImage = ({ setShowModal }: loginModalProp) => {
       </div>
       <div className="flex flex-col md:flex-row justify-between px-10 ">
         <TextPart setShowModal={setShowModal} />
-        <div className="md:w-[50%] flex justify-center order-1 md:order-2">
+        <div className="md:w-[50%] flex justify-center order-1 md:order-2 mb-4">
           <img src="assets/Hero-Image.jpg" className="md:w-[35vw]" />
         </div>
       </div>
