@@ -4,8 +4,8 @@ import { loginModalProp } from "../HeroImage";
 
 const TextPart = ({ setShowModal }: loginModalProp) => {
   return (
-    <div className=" flex flex-col justify-center w-[50%] space-y-14 px-6 font-semibold text-gray-600 text-lg">
-      <div className="font-SpaceMono text-4xl font-bold  px-5 whitespace-break-spaces leading-14 italic text-black">
+    <div className="order-2 md:order-1  flex flex-col justify-center md:w-[50%] space-y-7 md:space-y-14 px-6 font-semibold text-gray-600 text-sm md:text-lg mt-14 md:mt-0">
+      <div className="font-SpaceMono text-xl md:text-4xl font-bold  px-5 whitespace-break-spaces md:leading-14 italic text-black">
         Empower Your Users with Secure and Convenient One-Time
       </div>
 
@@ -18,7 +18,7 @@ const TextPart = ({ setShowModal }: loginModalProp) => {
         Customize your email templates, choose from our pre-designed options
       </div>
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 mb-9">
         <OrangeButton title="Get Started" onClick={() => setShowModal(true)} />
         <WhiteButton title="Learn More" />
       </div>

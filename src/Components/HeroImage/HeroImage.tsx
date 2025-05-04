@@ -10,15 +10,15 @@ const HeroImage = ({ setShowModal }: loginModalProp) => {
   return (
     <div className="font-SpaceMono bg-[#f3e5dc]  pt-4 rounded-bl-[150px] ">
       <Navbar setShowModal={setShowModal} />
-      <div className="w-full flex justify-center my-10">
-        <div className="text-7xl font-SpaceMono font-bold italic w-[50%] text-center">
+      <div className="w-full flex justify-center my-6 md:my-10">
+        <div className="text-3xl md:text-7xl font-SpaceMono font-bold italic w-[50%] text-center">
           Introducing OTP-Mailer:
         </div>
       </div>
-      <div className="flex justify-between px-10">
+      <div className="flex flex-col md:flex-row justify-between px-10 ">
         <TextPart setShowModal={setShowModal} />
-        <div className="w-[50%] flex justify-center">
-          <img src="assets/Hero-Image.jpg" className="w-[35vw]" />
+        <div className="md:w-[50%] flex justify-center order-1 md:order-2">
+          <img src="assets/Hero-Image.jpg" className="md:w-[35vw]" />
         </div>
       </div>
     </div>
