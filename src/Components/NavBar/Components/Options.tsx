@@ -29,10 +29,10 @@ const Options = () => {
                 to={`${item.link}`}
                 key={item.title}
                 className={({ isActive }) =>
-                  isActive ? "font-bold text-gray-900" : ""
+                  isActive ? "font-bold text-gray-900 " : ""
                 }
               >
-                <div className="hover:font-semibold hover:text-gray-600">
+                <div className="hover:font-semibold hover:text-gray-600 ">
                   {item.title}
                 </div>
               </NavLink>

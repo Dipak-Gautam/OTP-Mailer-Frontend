@@ -24,16 +24,16 @@ const MotionSideNav = ({ open, onClose }: MotionSideNavProps) => {
             transition={{ type: "tween", duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between border-b border-gray-700 pb-4 mb-6">
               <div className="border border-gray-700  rounded-full p-2 bg-gray-700 cursor-pointer">
                 <TbNorthStar className="text-white text-2xl" />
               </div>
               <div className="font-SpaceMono text-xl font-bold italic">
                 OTP-Mailer
               </div>
-
-              <MobileOptions />
             </div>
+
+            <MobileOptions />
           </motion.div>
         </div>
       )}
