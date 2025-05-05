@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Product from "./Product/Product";
-import Offcanvas from "react-bootstrap/Offcanvas";
+
 import { GiHamburgerMenu } from "react-icons/gi";
+import MotionSideNav from "./MotionSideNav";
 
 const options = [
   { title: "Home", link: "/" },
@@ -13,7 +14,7 @@ const options = [
 
 const Options = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+
   return (
     <>
       <div className="hidden md:flex items-center gap-6 text-gray-700 font-SpaceMono font-medium ">
@@ -42,6 +43,7 @@ const Options = () => {
       <div className="flex md:hidden items-center justify-center my-auto h-full">
         <GiHamburgerMenu className="text-xl" onClick={() => setShow(true)} />
       </div>
+      <MotionSideNav open={show} onClose={() => setShow(false)} />
     </>
   );
 };
