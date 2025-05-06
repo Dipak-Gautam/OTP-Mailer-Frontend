@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const DashNav = () => {
   return (
-    <div className=" h-full w-[20%] p-5 bg-[#f3e5dc] flex flex-col cursor-default">
+    <div className="hidden h-full w-[20%] p-5 bg-[#f3e5dc] md:flex flex-col cursor-default">
       <div className="flex justify-center items-center gap-4 px-5">
         <div className="border border-gray-700  rounded-full p-2 bg-gray-700 cursor-pointer w-fit">
           <TbNorthStar className="text-white text-4xl" />

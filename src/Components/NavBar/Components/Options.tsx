@@ -41,7 +41,10 @@ const Options = () => {
         ))}
       </div>
       <div className="flex md:hidden items-center justify-center my-auto h-full">
-        <GiHamburgerMenu className="text-xl" onClick={() => setShow(true)} />
+        <GiHamburgerMenu
+          className="text-2xl sm:text-4xl"
+          onClick={() => setShow(true)}
+        />
       </div>
       <MotionSideNav open={show} onClose={() => setShow(false)} />
     </>
