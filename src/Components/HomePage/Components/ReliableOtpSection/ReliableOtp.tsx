@@ -4,12 +4,12 @@ import { loginModalProp } from "../../../HeroImage/HeroImage";
 
 const ReliableOtp = ({ setShowModal }: loginModalProp) => {
   return (
-    <div className="flex mx-20 my-14 gap-16">
+    <div className="flex mx-5 md:mx-10 lg:mx-20 my-14 gap-8 lg:gap-16">
       <div className="flex flex-col justify-center gap-8 px-8">
-        <div className="text-black  font-SpaceMono italic font-bold text-4xl">
+        <div className="text-black  font-SpaceMono italic font-bold text-2xl md:text-4xl">
           Reliable OTP
         </div>
-        <div className="text-xl font-medium text-gray-400 pr-28">
+        <div className=" text-sm md:text-xl font-medium text-gray-400 xl:pr-28">
           Trust OTP-Mailer to deliver your one-time passwords with speed and
           accuracy. Our robust infrastructure and security protocols safeguard
           your user data
@@ -21,8 +21,8 @@ const ReliableOtp = ({ setShowModal }: loginModalProp) => {
           </div>
         </div>
       </div>
-      <div>
-        <img src="assets/reliableOtp.png" />
+      <div className=" hidden md:flex w-[70%] lg:w-[50%] ">
+        <img src="assets/reliableOtp.png" className="w-full h-full bg-cover" />
       </div>
     </div>
   );

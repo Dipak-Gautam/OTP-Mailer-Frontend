@@ -4,17 +4,17 @@ import { loginModalProp } from "../../../HeroImage/HeroImage";
 const SecureOtp = ({ setShowModal }: loginModalProp) => {
   return (
     <div
-      className="mx-20 my-24 p-5 py-20 rounded-3xl  bg-cover bg-no-repeat"
+      className=" mx-5 md:mx-10 lg:mx-20 my-24 p-5 py-14 md:py-20 rounded-3xl  bg-left-top lg:bg-cover bg-no-repeat "
       style={{
         backgroundImage: `url("assets/SecureOtp.jpg")`,
       }}
     >
-      <div className="text-white text-5xl font-SpaceMono italic font-bold text-center mb-14">
+      <div className="text-white text-3xl md:text-5xl font-SpaceMono italic font-bold text-center mb-5 md:mb-14">
         Secure Otp
       </div>
-      <div className="flex w-full justify-end mb-14 ">
-        <div className="w-[45%]  text-gray-200 text-xl font-medium flex flex-col gap-14 px-10">
-          <div className="text-white text-4xl text-center font-semibold font-SpaceMono italic">
+      <div className="flex w-full justify-end mb-7 md:mb-14 ">
+        <div className="lg:w-[45%]  text-gray-200 text-sm md:text-xl font-medium flex flex-col gap-4 md:gap-14 px-10">
+          <div className="text-white text-xl md:text-4xl text-center font-semibold font-SpaceMono italic">
             Customizable Email
           </div>
           <div>

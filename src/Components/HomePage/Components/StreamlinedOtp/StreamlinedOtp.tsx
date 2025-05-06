@@ -2,7 +2,7 @@ import React from "react";
 
 const StreamlinedOtp = () => {
   return (
-    <div className="px-14 my-24">
+    <div className=" px-5 md:px-10 my-24">
       <div className="text-center space-y-4">
         <div className="text-black font-SpaceMono text-2xl md:text-4xl font-bold italic">
           Streamlined OTP Delivery
@@ -12,8 +12,8 @@ const StreamlinedOtp = () => {
           with our user-friendly platform
         </div>
       </div>
-      <div className="my-14 px-8 md:flex gap-8">
-        <div className=" hidden md:flex w-[35%]">
+      <div className=" my-7 md:my-14 px-3 md:px-8 md:flex gap-8">
+        <div className=" hidden lg:flex w-[35%]">
           <img src="assets/streamLine.jpg" className=" rounded-4xl" />
         </div>
         <div className=" flex flex-col flex-1 bg-[#f3e5dc] rounded-2xl md:rounded-4xl p-7  md:p-14 gap-5 md:gap-10">
