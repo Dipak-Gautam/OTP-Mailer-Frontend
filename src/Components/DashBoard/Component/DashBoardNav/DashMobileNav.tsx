@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { TbNorthStar } from "react-icons/tb";
+import MobileDashNav from "./Components/MobileDashNav";
 
 const DashMobileNav = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <div className="md:hidden bg-[#f3e5dc] p-5 justify-between flex">
       <div className="flex justify-center items-center gap-4 ">
@@ -20,6 +21,7 @@ const DashMobileNav = () => {
           onClick={() => setShow(true)}
         />
       </div>
+      <MobileDashNav open={show} onClose={() => setShow(false)} />
     </div>
   );
 };
