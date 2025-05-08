@@ -5,7 +5,7 @@ import MobileDashNav from "./Components/MobileDashNav";
 import { useNavigate } from "react-router-dom";
 
 const DashMobileNav = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="md:hidden bg-[#f3e5dc] p-5 justify-between flex">
