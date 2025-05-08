@@ -3,13 +3,12 @@ import { MdDashboard } from "react-icons/md";
 import { PiBookOpenTextLight } from "react-icons/pi";
 import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { GiHouseKeys } from "react-icons/gi";
-import { MdOutlineDesignServices } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
 const DashNav = () => {
   return (
-    <div className="hidden h-full w-[20%] p-5 bg-[#f3e5dc] md:flex flex-col cursor-default">
+    <div className="hidden h-full w-[20%] p-5 bg-[#f3e5dc] lg:flex flex-col cursor-default">
       <div className="flex justify-center items-center gap-4 px-5">
         <div className="border border-gray-700  rounded-full p-2 bg-gray-700 cursor-pointer w-fit">
           <TbNorthStar className="text-white text-4xl" />

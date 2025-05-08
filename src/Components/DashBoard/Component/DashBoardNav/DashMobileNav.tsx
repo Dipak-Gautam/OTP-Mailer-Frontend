@@ -8,7 +8,7 @@ const DashMobileNav = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   return (
-    <div className="md:hidden bg-[#f3e5dc] p-5 justify-between flex">
+    <div className="lg:hidden bg-[#f3e5dc] p-5 justify-between flex">
       <div
         className="flex justify-center items-center gap-2 "
         onClick={() => navigate("/dashboard")}
@@ -20,7 +20,7 @@ const DashMobileNav = () => {
           OTP-Mailer:
         </div>
       </div>
-      <div className="flex md:hidden items-center justify-center my-auto h-full">
+      <div className="flex lg:hidden items-center justify-center my-auto h-full">
         <GiHamburgerMenu
           className="text-2xl sm:text-4xl"
           onClick={() => setShow(true)}
