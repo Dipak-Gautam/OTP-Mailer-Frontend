@@ -33,8 +33,8 @@ const EmailConfiguration = () => {
   );
 
   return (
-    <div className="flex gap-10 h-full">
-      <div className="w-[50%] space-y-8">
+    <div className="flex flex-col md:flex-row gap-10 h-full">
+      <div className="md:w-[50%] space-y-8">
         <Template
           titleColor={titleColor}
           bodyBackgroundColor={bodyBackgroundColor}
