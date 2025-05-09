@@ -5,8 +5,12 @@ import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { GiHouseKeys } from "react-icons/gi";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import Logout from "../../../Authentication/LogOut/Logout";
 
 const DashNav = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="hidden h-full w-[20%] p-5 bg-[#f3e5dc] lg:flex flex-col cursor-default">
       <div className="flex justify-center items-center gap-4 px-5">
@@ -87,10 +91,15 @@ const DashNav = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer w-fit">
+      <div
+        className="flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer w-fit"
+        onClick={() => setOpen(true)}
+      >
         <RiLogoutCircleLine className="text-2xl" />
         <div className=" text-black font-medium">Logout</div>
       </div>
+
+      <Logout open={open} onClose={() => setOpen(false)} />
     </div>
   );
 };
