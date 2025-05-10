@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import DeleteAccountModal from "../../../../Authentication/DeleteModal/DeleteAccountModal";
 
 const DeleteAccount = () => {
+  const [open, setClose] = useState(false);
   return (
     <div className="border p-4 rounded-xl border-gray-300 shadow-xl shadow-gray-400/50">
       <div className="text-xl font-medium text-gray-900">Delete Account</div>
       <div className="md:flex flex-1">
         <div className="flex flex-1 justify-center items-center min-h-28">
-          <div className="p-2 px-3 bg-red-500 text-white font-semibold rounded-md cursor-pointer hover:bg-red-600 transition duration-200 ease-in-out">
+          <div
+            className="p-2 px-3 bg-red-500 text-white font-semibold rounded-md cursor-pointer hover:bg-red-600 transition duration-200 ease-in-out"
+            onClick={() => setClose(true)}
+          >
             Delete Account
           </div>
         </div>
@@ -25,6 +30,7 @@ const DeleteAccount = () => {
           </div>
         </div>
       </div>
+      <DeleteAccountModal open={open} onClose={() => setClose(false)} />
     </div>
   );
 };
