@@ -19,9 +19,9 @@ const Options = () => {
     <>
       <div className="hidden md:flex items-center gap-6 text-gray-700 font-SpaceMono font-medium ">
         {options.map((item) => (
-          <>
+          <div key={item.title}>
             {item.title === "Products" ? (
-              <div className="relative">
+              <div className="relative" key={item.title}>
                 <Product />
               </div>
             ) : (
@@ -37,7 +37,7 @@ const Options = () => {
                 </div>
               </NavLink>
             )}
-          </>
+          </div>
         ))}
       </div>
       <div className="flex md:hidden items-center justify-center my-auto h-full">
