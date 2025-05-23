@@ -25,9 +25,8 @@ const loginApi = async (
   if (request.status == 200) {
     const response = await request.json();
     asyncStorageToken(response.token);
-    asyncStorageUserInfo(response.data);
+    asyncStorageUserInfo(response.response);
     navigate("/dashboard");
-    console.log("response", response);
   } else {
     setError("root", { message: "Invalid email or password" });
   }

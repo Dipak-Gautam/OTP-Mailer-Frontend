@@ -1,4 +1,6 @@
 import React from "react";
+import removeData from "../../../CustomFunctions/removeData";
+import { useNavigate } from "react-router-dom";
 
 interface LogoutProps {
   open: boolean;
@@ -6,6 +8,7 @@ interface LogoutProps {
 }
 
 const Logout = ({ open, onClose }: LogoutProps) => {
+  const navigation = useNavigate();
   return (
     <div
       className={`fixed inset-0 flex justify-center items-center z-10 bg-slate-100/50 transition-colors ${
@@ -23,7 +26,12 @@ const Logout = ({ open, onClose }: LogoutProps) => {
           Are you sure you want to Logout ?
         </div>
         <div className="flex justify-end gap-5 mt-6">
-          <div className="p-2 px-4 border  rounded-md bg-red-500 font-bold text-white hover:bg-red-600 cursor-pointer">
+          <div
+            className="p-2 px-4 border  rounded-md bg-red-500 font-bold text-white hover:bg-red-600 cursor-pointer"
+            onClick={() => {
+              removeData(), navigation("/");
+            }}
+          >
             Confirm
           </div>
           <div
