@@ -1,10 +1,6 @@
-import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { registerData } from "../MainRegister";
-
 import { useNavigate } from "react-router-dom";
 import registerApi from "../../../../../Api/AuthenticationApi/registerApi";
 import TextInputControllers from "../../../../Input/TextInputController";

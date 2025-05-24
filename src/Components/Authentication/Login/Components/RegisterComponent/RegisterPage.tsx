@@ -56,13 +56,13 @@ const RegisterPage = ({
         Register
       </div>
       <div className="font-lexend text-slate-600 text-center mt-6 text-sm">
-        Already have an account?{" "}
+        Already have an account?
         <span
           className="text-text font-medium cursor-pointer"
           onClick={() => setSelector("login")}
         >
           Login
-        </span>{" "}
+        </span>
       </div>
     </div>
   );

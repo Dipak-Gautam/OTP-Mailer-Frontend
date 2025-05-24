@@ -24,6 +24,7 @@ const MainRegister = ({
     email: "",
     otp: "",
   });
+
   return (
     <>
       {registerStage == 1 && (
