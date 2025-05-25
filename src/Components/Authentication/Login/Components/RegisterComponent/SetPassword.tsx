@@ -64,7 +64,6 @@ const SetPassword = ({ registerData }: SetPasswordProp) => {
       >
         {isSubmitting ? (
           <div className="p-2 flex-1 bg-orange-400 hover:bg-orange-500">
-            {" "}
             Submitting
           </div>
         ) : (

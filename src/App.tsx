@@ -7,10 +7,12 @@ import Dashboard from "./Components/DashBoard/Component/Dashboard/Dashboard";
 import AccountApi from "./Components/DashBoard/Component/AccountApi/Account&Api";
 import DashContact from "./Components/DashBoard/Component/DashContact/DashContact";
 import DashDocumentation from "./Components/DashBoard/Component/DashDocumentation/DashDocumentation";
+import AuthRedirect from "./AuthRedirect";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <HomePage />,
   },
   {
@@ -20,20 +22,28 @@ const router = createBrowserRouter([
   { path: "/contact", element: <Contact /> },
   {
     path: "/dashboard",
-    element: <DashboardMain />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: "",
-        element: <Dashboard />,
+        element: <DashboardMain />,
+        children: [
+          { path: "", element: <Dashboard /> },
+          { path: "docs", element: <DashDocumentation /> },
+          { path: "contact", element: <DashContact /> },
+          { path: "account", element: <AccountApi /> },
+        ],
       },
-
-      { path: "docs", element: <DashDocumentation /> },
-      { path: "contact", element: <DashContact /> },
-      { path: "account", element: <AccountApi /> },
     ],
+  },
+  {
+    path: "/",
+    element: <AuthRedirect />,
   },
 ]);
 function App() {
+  const isAuthenticated = localStorage.getItem("token");
+  console.log("Is Authenticated:", isAuthenticated);
   return (
     <div>
       <RouterProvider router={router} />
