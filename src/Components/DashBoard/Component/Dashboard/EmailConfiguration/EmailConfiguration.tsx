@@ -18,9 +18,7 @@ const EmailConfiguration = () => {
   const [footerColor, setFooterColor] = React.useState("#6f7686");
   const [footerBackgroundColor, setFooterBackgroundColor] =
     React.useState("#f4f4f4");
-
   //data
-
   const [title, setTitle] = React.useState("Verify your Email");
   const [firstParagraph, setFirstParagraph] = React.useState(
     "Hello\nThank you for signing up! Please confirm your email address by entering the code below:"
@@ -31,6 +29,7 @@ const EmailConfiguration = () => {
   const [footer, setFooter] = useState(
     "© 2025 Dipak Gautam. All rights reserved."
   );
+  const [subject, setSubject] = useState("Email Verification");
 
   return (
     <div className="flex flex-col md:flex-row gap-10 h-full">
@@ -54,7 +53,24 @@ const EmailConfiguration = () => {
           footer={footer}
           setFooter={setFooter}
         />
-        <SaveAndTest />
+        <SaveAndTest
+          data={{
+            titleColor: titleColor,
+            bodyBackgroundColor: bodyBackgroundColor,
+            bodyColor: bodyColor,
+            footerBackgroundColor: footerBackgroundColor,
+            footerColor: footerColor,
+            optBackgroundColor: optBackgroundColor,
+            optColor: optColor,
+            otpBorderColor: otpBorderColor,
+            titleBackgroundColor: titleBackgroundColor,
+            title: title,
+            firstParagraph: firstParagraph,
+            afterParagraph: afterParagraph,
+            footer: footer,
+            subject: subject,
+          }}
+        />
       </div>
 
       <div className="h-full  flex-1 space-y-5">

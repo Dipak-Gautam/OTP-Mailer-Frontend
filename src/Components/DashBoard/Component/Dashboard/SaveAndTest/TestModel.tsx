@@ -7,7 +7,7 @@ interface SaveModelProps {
   onClose: () => void;
 }
 
-const SaveModel = ({ open, onClose }: SaveModelProps) => {
+const TestModel = ({ open, onClose }: SaveModelProps) => {
   const [email, setEmail] = React.useState<string>("");
   return (
     <div
@@ -52,4 +52,4 @@ const SaveModel = ({ open, onClose }: SaveModelProps) => {
   );
 };
 
-export default SaveModel;
+export default TestModel;

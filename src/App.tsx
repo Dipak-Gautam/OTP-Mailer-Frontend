@@ -43,7 +43,7 @@ const router = createBrowserRouter([
 ]);
 function App() {
   const isAuthenticated = localStorage.getItem("token");
-  console.log("Is Authenticated:", isAuthenticated);
+
   return (
     <div>
       <RouterProvider router={router} />
