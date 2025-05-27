@@ -10,7 +10,7 @@ const SaveButton = ({ title, isLoading, ...props }: OrangeButtonProp) => {
       className={` ${
         isLoading == 1
           ? "bg-[#f8663f] hover:bg-orange-600"
-          : "bg-gray-500 hover:bg-orange-600"
+          : "bg-[#904c39] hover:bg-[hsl(25,31%,54%)]"
       }   w-fit p-2 px-4 font-sans font-bold rounded-md text-gray-200 hover:text-white cursor-pointer `}
       {...props}
     >
