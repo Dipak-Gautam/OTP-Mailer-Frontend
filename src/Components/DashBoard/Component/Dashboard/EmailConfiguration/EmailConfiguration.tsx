@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Template from "./Components/Template";
 import TemplateSetting from "./Components/TemplateSetting";
 import PreBuildTemplates from "../PreBuildTemplates/PreBuildTemplates";
 import SaveAndTest from "../SaveAndTest/SaveAndTest";
+import { set } from "react-hook-form";
 
 const EmailConfiguration = () => {
   // colors
@@ -30,6 +31,30 @@ const EmailConfiguration = () => {
     "© 2025 Dipak Gautam. All rights reserved."
   );
   const [subject, setSubject] = useState("Email Verification");
+  const [isLoading, setIsLoading] = useState(0);
+  const firstLoad = React.useRef(true);
+
+  useEffect(() => {
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return;
+    }
+    setIsLoading(1);
+  }, [
+    titleColor,
+    titleBackgroundColor,
+    optColor,
+    optBackgroundColor,
+    otpBorderColor,
+    bodyColor,
+    bodyBackgroundColor,
+    footerColor,
+    footerBackgroundColor,
+    title,
+    firstParagraph,
+    afterParagraph,
+    footer,
+  ]);
 
   return (
     <div className="flex flex-col md:flex-row gap-10 h-full">
@@ -70,6 +95,8 @@ const EmailConfiguration = () => {
             footer: footer,
             subject: subject,
           }}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
         />
       </div>
 
