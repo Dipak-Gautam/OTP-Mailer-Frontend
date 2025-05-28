@@ -4,33 +4,53 @@ import TemplateSetting from "./Components/TemplateSetting";
 import PreBuildTemplates from "../PreBuildTemplates/PreBuildTemplates";
 import SaveAndTest from "../SaveAndTest/SaveAndTest";
 import { set } from "react-hook-form";
+import { IUserInfo } from "../../../../../Schema/userInfo.Schema";
 
 const EmailConfiguration = () => {
+  const localStorageUserInfo = localStorage.getItem("userInfo");
+  if (!localStorageUserInfo) return;
+
+  const userData: IUserInfo = JSON.parse(
+    localStorage.getItem("userInfo") || "{}"
+  );
+  console.log("User Data: ", userData);
+
   // colors
-  const [titleColor, setTitleColor] = React.useState("#ffffff");
-  const [titleBackgroundColor, setTitleBackgroundColor] =
-    React.useState("#33e371");
-  const [optColor, setOptColor] = React.useState("#00a63e");
-  const [optBackgroundColor, setOptBackgroundColor] = React.useState("#e8f5e9");
-  const [otpBorderColor, setOtpBorderColor] = React.useState("#00a63e");
-  const [bodyColor, setBodyColor] = React.useState("#1d1d1d");
-  const [bodyBackgroundColor, setBodyBackgroundColor] =
-    React.useState("#ffffff");
-  const [footerColor, setFooterColor] = React.useState("#6f7686");
-  const [footerBackgroundColor, setFooterBackgroundColor] =
-    React.useState("#f4f4f4");
+  const [titleColor, setTitleColor] = React.useState(
+    userData.emailConfig.titleColor
+  );
+  const [titleBackgroundColor, setTitleBackgroundColor] = React.useState(
+    userData.emailConfig.titleBackgroundColor
+  );
+  const [optColor, setOptColor] = React.useState(userData.emailConfig.optColor);
+  const [optBackgroundColor, setOptBackgroundColor] = React.useState(
+    userData.emailConfig.optBackgroundColor
+  );
+  const [otpBorderColor, setOtpBorderColor] = React.useState(
+    userData.emailConfig.otpBorderColor
+  );
+  const [bodyColor, setBodyColor] = React.useState(
+    userData.emailConfig.bodyColor
+  );
+  const [bodyBackgroundColor, setBodyBackgroundColor] = React.useState(
+    userData.emailConfig.bodyBackgroundColor
+  );
+  const [footerColor, setFooterColor] = React.useState(
+    userData.emailConfig.footerColor
+  );
+  const [footerBackgroundColor, setFooterBackgroundColor] = React.useState(
+    userData.emailConfig.footerBackgroundColor
+  );
   //data
-  const [title, setTitle] = React.useState("Verify your Email");
+  const [title, setTitle] = React.useState(userData.emailConfig.title);
   const [firstParagraph, setFirstParagraph] = React.useState(
-    "Hello\nThank you for signing up! Please confirm your email address by entering the code below:"
+    userData.emailConfig.firstParagraph
   );
   const [afterParagraph, setAfterParagraph] = React.useState(
-    "If you did not create an account, no further action is required. If you have any questions, feel free to contact our support team."
+    userData.emailConfig.afterParagraph
   );
-  const [footer, setFooter] = useState(
-    "© 2025 Dipak Gautam. All rights reserved."
-  );
-  const [subject, setSubject] = useState("Email Verification");
+  const [footer, setFooter] = useState(userData.emailConfig.footer);
+  const [subject, setSubject] = useState(userData.emailConfig.subject);
   const [isLoading, setIsLoading] = useState(0);
   const firstLoad = React.useRef(true);
 
