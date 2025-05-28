@@ -18,6 +18,8 @@ export interface TemplateProps {
   setAfterParagraph: React.Dispatch<React.SetStateAction<string>>;
   footer: string;
   setFooter: React.Dispatch<React.SetStateAction<string>>;
+  subject: string;
+  setSubject: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Template = ({
@@ -38,6 +40,8 @@ const Template = ({
   setAfterParagraph,
   footer,
   setFooter,
+  setSubject,
+  subject,
 }: TemplateProps) => {
   const titleRef = useRef(null);
   const firstParagraphRef = useRef(null);
@@ -63,9 +67,18 @@ const Template = ({
         Configure the email
       </div>
       <div className="flex gap-2 my-5 items-center mx-3">
-        <div className="text-lg font-medium ">Subject :</div>
-        <div className="flex-1">
-          <input className="border border-gray-400 rounded-md p-1 text-sm px-3 w-full" />
+        <div className="flex-1 relative">
+          <span className="absolute top-0 text-[11px] text-gray-600 font-medium bg-white px-1 left-2 -translate-y-2">
+            Subject
+          </span>
+          <input
+            value={subject}
+            onChange={(event) => {
+              setSubject(event.target.value);
+            }}
+            className="border border-gray-400 rounded-md p-2 text-base px-3 w-full outline-none"
+            placeholder="Subject"
+          />
         </div>
       </div>
       <div className="border rounded-lg overflow-hidden border-gray-300">
@@ -134,7 +147,13 @@ const Template = ({
           }}
           className=" text-center p-3 text-xs  font-medium"
         >
-          © 2025 Dipak Gautam. All rights reserved.
+          <input
+            value={footer}
+            onChange={(event) => {
+              setFooter(event.target.value);
+            }}
+            className="border-none outline-none bg-transparent w-full text-center resize-none overflow-hidden"
+          />
         </div>
       </div>
     </div>

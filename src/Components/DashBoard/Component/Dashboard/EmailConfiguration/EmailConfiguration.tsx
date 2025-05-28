@@ -77,6 +77,8 @@ const EmailConfiguration = () => {
           setAfterParagraph={setAfterParagraph}
           footer={footer}
           setFooter={setFooter}
+          subject={subject}
+          setSubject={setSubject}
         />
         <SaveAndTest
           data={{

@@ -2,6 +2,7 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import OrangeButton from "../../../../Buttons/OrangeButton/OrangeButton";
 import testEmailApi from "../../../../../Api/EmailConfig/testEmailApi";
+import { set } from "react-hook-form";
 
 interface SaveModelProps {
   open: boolean;
@@ -19,6 +20,7 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
   };
 
   const handelSend = () => {
+    setMessage(3);
     if (isValidEmail(email)) {
       testEmailApi(email, setMessage);
     } else {
@@ -31,7 +33,9 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
       className={`fixed inset-0 flex justify-center items-center bg-slate-300/50 transition-colors z-50  ${
         open ? "visible" : "invisible"
       }`}
-      onClick={onClose}
+      onClick={() => {
+        onClose(), setMessage(0);
+      }}
     >
       <div
         className={` bg-white/50 border border-white rounded-xl p-4 px-8 backdrop-blur-xs w-96 flex flex-col gap-3 overflow-hidden shadow-xl shadow-slate-500/50 m-8 transition-all  duration-500 ${
@@ -41,7 +45,9 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
       >
         <div
           className="flex justify-center items-center px-2 py-2 font-sans font-semibold absolute top-0.5 right-0.5 bg-orange-400 rounded-tr-xl rounded-bl-xl cursor-pointer hover:bg-orange-500 "
-          onClick={onClose}
+          onClick={() => {
+            onClose(), setMessage(0);
+          }}
         >
           <IoClose className="text-xl text-white" />
         </div>
@@ -59,7 +65,7 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
             placeholder="Enter your email"
             className="border rounded-md p-2 w-full mt-2 mb-2"
           />
-          <div className="h-3">
+          <div className="h-4">
             {message === 1 && (
               <span className="text-xs text-red-500">
                 Please enter a valid email address.
@@ -77,7 +83,7 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
           className="flex justify-center items-center bg-orange-400 hover:bg-orange-500 text-white rounded-md p-2 font-semibold  cursor-pointer "
           onClick={handelSend}
         >
-          Send
+          {message == 3 ? "Sending" : "Send"}
         </div>
       </div>
     </div>
