@@ -1,4 +1,3 @@
-import { orange } from "@mui/material/colors";
 import { IUserInfo } from "../../../../Schema/userInfo.Schema";
 import EmailConfiguration from "./EmailConfiguration/EmailConfiguration";
 import { HashLoader, PulseLoader } from "react-spinners";

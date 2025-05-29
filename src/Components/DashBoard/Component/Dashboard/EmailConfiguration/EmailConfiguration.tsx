@@ -39,15 +39,15 @@ const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
     "#" + userData.emailConfig.footerBackgroundColor
   );
   //data
-  const [title, setTitle] = React.useState("#" + userData.emailConfig.title);
+  const [title, setTitle] = React.useState(userData.emailConfig.title);
   const [firstParagraph, setFirstParagraph] = React.useState(
-    "#" + userData.emailConfig.firstParagraph
+    userData.emailConfig.firstParagraph
   );
   const [afterParagraph, setAfterParagraph] = React.useState(
-    "#" + userData.emailConfig.afterParagraph
+    userData.emailConfig.afterParagraph
   );
-  const [footer, setFooter] = useState("#" + userData.emailConfig.footer);
-  const [subject, setSubject] = useState("#" + userData.emailConfig.subject);
+  const [footer, setFooter] = useState(userData.emailConfig.footer);
+  const [subject, setSubject] = useState(userData.emailConfig.subject);
   const [isLoading, setIsLoading] = useState(0);
   const firstLoad = React.useRef(true);
 
@@ -75,7 +75,7 @@ const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
 
   return (
     <div className="flex flex-col md:flex-row gap-10 h-full">
-      <div className="md:w-[50%] space-y-8">
+      <div className="md:w-[50%] space-y-8 ">
         <Template
           titleColor={titleColor}
           bodyBackgroundColor={bodyBackgroundColor}
@@ -119,7 +119,7 @@ const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
         />
       </div>
 
-      <div className="h-full  flex-1 space-y-5">
+      <div className="h-full  flex-1 space-y-5 border-l pl-5 bg-slate-50">
         <TemplateSetting
           titleColor={titleColor}
           titleBackgroundColor={titleBackgroundColor}

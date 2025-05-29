@@ -42,11 +42,11 @@ const TemplateSetting = ({
   bodyColor,
 }: TemplateSettingProps) => {
   return (
-    <div className="flex-1">
+    <div className="flex-1 ">
       <div className="font-SpaceMono text-xl italic font-bold text-center mb-4">
         Configure the Color
       </div>
-      <div className="border rounded-md border-gray-500 pb-3">
+      <div className="border rounded-md border-gray-500 pb-3 bg-white">
         <div className="flex justify-between mt-2 items-center px-5 pb-3 border-b border-gray-300">
           <div className="flex flex-col gap-1   ">
             <label htmlFor="titleColor">Title Color</label>
@@ -58,7 +58,7 @@ const TemplateSetting = ({
               onChange={(e) => setTitleColor(e.target.value)}
             />
           </div>
-          <div className="flex flex-col gap-1 items-end">
+          <div className="flex flex-col gap-1 items-end ">
             <label htmlFor="titleBackgroundColor">Title Background Color</label>
             <input
               className="rounded-md"
