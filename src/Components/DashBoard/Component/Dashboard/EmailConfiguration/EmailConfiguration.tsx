@@ -3,54 +3,51 @@ import Template from "./Components/Template";
 import TemplateSetting from "./Components/TemplateSetting";
 import PreBuildTemplates from "../PreBuildTemplates/PreBuildTemplates";
 import SaveAndTest from "../SaveAndTest/SaveAndTest";
-import { set } from "react-hook-form";
 import { IUserInfo } from "../../../../../Schema/userInfo.Schema";
 
-const EmailConfiguration = () => {
-  const localStorageUserInfo = localStorage.getItem("userInfo");
-  if (!localStorageUserInfo) return;
+interface EmailConfigurationProps {
+  userData: IUserInfo;
+}
 
-  const userData: IUserInfo = JSON.parse(
-    localStorage.getItem("userInfo") || "{}"
-  );
-  console.log("User Data: ", userData);
-
+const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
   // colors
   const [titleColor, setTitleColor] = React.useState(
-    userData.emailConfig.titleColor
+    "#" + userData.emailConfig.titleColor
   );
   const [titleBackgroundColor, setTitleBackgroundColor] = React.useState(
-    userData.emailConfig.titleBackgroundColor
+    "#" + userData.emailConfig.titleBackgroundColor
   );
-  const [optColor, setOptColor] = React.useState(userData.emailConfig.optColor);
+  const [optColor, setOptColor] = React.useState(
+    "#" + userData.emailConfig.optColor
+  );
   const [optBackgroundColor, setOptBackgroundColor] = React.useState(
-    userData.emailConfig.optBackgroundColor
+    "#" + userData.emailConfig.optBackgroundColor
   );
   const [otpBorderColor, setOtpBorderColor] = React.useState(
-    userData.emailConfig.otpBorderColor
+    "#" + userData.emailConfig.otpBorderColor
   );
   const [bodyColor, setBodyColor] = React.useState(
-    userData.emailConfig.bodyColor
+    "#" + userData.emailConfig.bodyColor
   );
   const [bodyBackgroundColor, setBodyBackgroundColor] = React.useState(
-    userData.emailConfig.bodyBackgroundColor
+    "#" + userData.emailConfig.bodyBackgroundColor
   );
   const [footerColor, setFooterColor] = React.useState(
-    userData.emailConfig.footerColor
+    "#" + userData.emailConfig.footerColor
   );
   const [footerBackgroundColor, setFooterBackgroundColor] = React.useState(
-    userData.emailConfig.footerBackgroundColor
+    "#" + userData.emailConfig.footerBackgroundColor
   );
   //data
-  const [title, setTitle] = React.useState(userData.emailConfig.title);
+  const [title, setTitle] = React.useState("#" + userData.emailConfig.title);
   const [firstParagraph, setFirstParagraph] = React.useState(
-    userData.emailConfig.firstParagraph
+    "#" + userData.emailConfig.firstParagraph
   );
   const [afterParagraph, setAfterParagraph] = React.useState(
-    userData.emailConfig.afterParagraph
+    "#" + userData.emailConfig.afterParagraph
   );
-  const [footer, setFooter] = useState(userData.emailConfig.footer);
-  const [subject, setSubject] = useState(userData.emailConfig.subject);
+  const [footer, setFooter] = useState("#" + userData.emailConfig.footer);
+  const [subject, setSubject] = useState("#" + userData.emailConfig.subject);
   const [isLoading, setIsLoading] = useState(0);
   const firstLoad = React.useRef(true);
 
