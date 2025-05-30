@@ -12,31 +12,29 @@ interface EmailConfigurationProps {
 const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
   // colors
   const [titleColor, setTitleColor] = React.useState(
-    "#" + userData.emailConfig.titleColor
+    userData.emailConfig.titleColor
   );
   const [titleBackgroundColor, setTitleBackgroundColor] = React.useState(
-    "#" + userData.emailConfig.titleBackgroundColor
+    userData.emailConfig.titleBackgroundColor
   );
-  const [optColor, setOptColor] = React.useState(
-    "#" + userData.emailConfig.optColor
-  );
+  const [optColor, setOptColor] = React.useState(userData.emailConfig.optColor);
   const [optBackgroundColor, setOptBackgroundColor] = React.useState(
-    "#" + userData.emailConfig.optBackgroundColor
+    userData.emailConfig.optBackgroundColor
   );
   const [otpBorderColor, setOtpBorderColor] = React.useState(
-    "#" + userData.emailConfig.otpBorderColor
+    userData.emailConfig.otpBorderColor
   );
   const [bodyColor, setBodyColor] = React.useState(
-    "#" + userData.emailConfig.bodyColor
+    userData.emailConfig.bodyColor
   );
   const [bodyBackgroundColor, setBodyBackgroundColor] = React.useState(
-    "#" + userData.emailConfig.bodyBackgroundColor
+    userData.emailConfig.bodyBackgroundColor
   );
   const [footerColor, setFooterColor] = React.useState(
-    "#" + userData.emailConfig.footerColor
+    userData.emailConfig.footerColor
   );
   const [footerBackgroundColor, setFooterBackgroundColor] = React.useState(
-    "#" + userData.emailConfig.footerBackgroundColor
+    userData.emailConfig.footerBackgroundColor
   );
   //data
   const [title, setTitle] = React.useState(userData.emailConfig.title);
