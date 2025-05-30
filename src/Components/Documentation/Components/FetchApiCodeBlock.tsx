@@ -37,10 +37,10 @@ const FetchApiCodeBlock = () => {
   return (
     <div>
       <div className="relative bg-gray-900 text-white p-4 rounded-xl shadow-md my-4 overflow-x-auto max-w-full">
-        <div className=" ">
+        <div className="flex justify-end items-center mb-2 ">
           <button
             onClick={handleCopy}
-            className="text-sm bg-blue-600 hover:bg-blue-700 transition-colors px-3 py-1 rounded-md absolute top-3 right-3"
+            className="text-sm bg-blue-600 hover:bg-blue-700 transition-colors px-3 py-1 rounded-md"
           >
             {copied ? "Copied!" : "Copy Code"}
           </button>

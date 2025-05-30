@@ -27,8 +27,7 @@ axios.post("http://localhost:3000/email/otp", {
   return (
     <div>
       <div className="relative bg-gray-900 text-white p-4 rounded-xl shadow-md my-4 overflow-x-auto max-w-full">
-        <div className="flex justify-between items-center mb-2">
-          <h2 className="text-lg font-semibold text-white">Axios API Code</h2>
+        <div className="flex justify-end items-center mb-2">
           <button
             onClick={handleCopy}
             className="text-sm bg-blue-600 hover:bg-blue-700 transition-colors px-3 py-1 rounded-md"
