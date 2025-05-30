@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import delateAccountApi from "../../../Api/AuthenticationApi/deleteAccountApi";
 
 interface DeleteAccountModalProps {
   open: boolean;
@@ -6,9 +8,10 @@ interface DeleteAccountModalProps {
 }
 
 const DeleteAccountModal = ({ open, onClose }: DeleteAccountModalProps) => {
+  const navigate = useNavigate();
   return (
     <div
-      className={`fixed inset-0 flex justify-center items-center z-10 bg-slate-100/50 transition-colors z-30 ${
+      className={`fixed inset-0 flex justify-center items-center  bg-slate-100/50 transition-colors z-30 ${
         open ? "visible" : "invisible"
       } `}
       onClick={() => onClose()}
@@ -30,7 +33,10 @@ const DeleteAccountModal = ({ open, onClose }: DeleteAccountModalProps) => {
           your account.
         </div>
         <div className="flex justify-end gap-5 mt-6">
-          <div className="p-2 px-4 border  rounded-md bg-red-500 font-bold text-white hover:bg-red-600 cursor-pointer text-sm md:text-base">
+          <div
+            className="p-2 px-4 border  rounded-md bg-red-500 font-bold text-white hover:bg-red-600 cursor-pointer text-sm md:text-base"
+            onClick={() => delateAccountApi(navigate)}
+          >
             Confirm
           </div>
           <div

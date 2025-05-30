@@ -1,12 +1,12 @@
-import HeroSection from "../../../Documentation/Components/HeroSection";
 import UsageSection from "../../../Documentation/Components/UsageSection";
+import DashHero from "./Component/DashHero";
 
 const DashDocumentation = () => {
   return (
-    <>
-      <HeroSection />
+    <div className="h-[100vh] overflow-y-auto">
+      <DashHero />
       <UsageSection />
-    </>
+    </div>
   );
 };
 

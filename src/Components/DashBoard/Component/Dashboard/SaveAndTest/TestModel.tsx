@@ -39,7 +39,7 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
       }}
     >
       <div
-        className={` bg-white/50 border border-white rounded-xl p-4 px-8 backdrop-blur-xs w-96 flex flex-col gap-3 overflow-hidden shadow-xl shadow-slate-500/50 m-8 transition-all  duration-500 ${
+        className={` bg-white/50 border border-white rounded-xl p-4 px-8 backdrop-blur-xs w-96 md:w-[27rem] flex flex-col gap-3 overflow-hidden shadow-xl shadow-slate-500/50 m-8 transition-all  duration-500 ${
           open ? "scale-100 opacity-100" : "scale-125 opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -55,7 +55,7 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
         <div className="text-center font-SpaceMono text-xl italic font-bold">
           Send Test Mail
         </div>
-        <div className="text-xs  italic text-red-400">
+        <div className=" text-xs md:text-sm font-medium  italic text-red-400">
           First save the configuration to send the updated test mail.
         </div>
         <div className="">
