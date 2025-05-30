@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { IPassword } from "../../../../../Schema/setPassword.schema";
 import {
   IChangePassword,
   IChangePasswordSchema,
@@ -8,8 +7,12 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import TextInputControllers from "../../../../Input/TextInputController";
 import OrangeButton from "../../../../Buttons/OrangeButton/OrangeButton";
+import changePasswordApi from "../../../../../Api/AuthenticationApi/changePasswordApi";
+import SuccessAlert from "../../../../Alert/SuccessAlert";
 
 const ChangePasswordOld = () => {
+  const [showAlert, setShowAlert] = useState(false);
+
   const {
     control,
     handleSubmit,
@@ -19,8 +22,13 @@ const ChangePasswordOld = () => {
     resolver: zodResolver(IChangePasswordSchema),
   });
 
-  const onSubmit: SubmitHandler<IChangePassword> = () => {
-    console.log(" submit clicked");
+  const onSubmit: SubmitHandler<IChangePassword> = (data) => {
+    changePasswordApi(
+      data.oldPassword,
+      data.newPassword,
+      setShowAlert,
+      setError
+    );
   };
 
   return (
@@ -63,6 +71,11 @@ const ChangePasswordOld = () => {
           </div>
         )}
       </div>
+      <SuccessAlert
+        message="Password changed successfully"
+        onClose={() => setShowAlert(false)}
+        showAlert={showAlert}
+      />
     </div>
   );
 };

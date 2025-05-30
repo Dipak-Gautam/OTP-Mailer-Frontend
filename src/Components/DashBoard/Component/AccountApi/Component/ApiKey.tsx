@@ -1,6 +1,11 @@
 import React from "react";
+import { IUserInfo } from "../../../../../Schema/userInfo.Schema";
 
-const ApiKey = () => {
+interface IApiKeyProps {
+  userData: IUserInfo;
+}
+
+const ApiKey = ({ userData }: IApiKeyProps) => {
   return (
     <div className="p-4 border border-gray-300 shadow-xl shadow-gray-400/50 rounded-xl ">
       <div className="text-gray-900 font-medium text-xl mb-2 ">
@@ -11,8 +16,8 @@ const ApiKey = () => {
           <div className=" text-gray-500 font-medium">
             Treat api key like a password—keep it safe and do not share it.
           </div>
-          <div className="bg-[#f7f7f7] font-lg text-gray-600 font-medium p-4 rounded-lg">
-            hello honey bunny
+          <div className="bg-[#f7f7f7] font-lg text-gray-600 font-medium p-4 rounded-lg  break-all">
+            {userData.secretCode}
           </div>
         </div>
         <div className=" mt-4 md:mt-0 md:w-[40%] flex flex-col gap-4">

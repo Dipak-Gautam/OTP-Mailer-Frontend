@@ -3,7 +3,7 @@ import ChangePasswordOld from "./ChangePasswordOld";
 
 const AccountSetting = () => {
   return (
-    <div className="p-4 border border-gray-300 shadow-xl shadow-gray-400/50 rounded-xl">
+    <div className=" p-4 border border-gray-300 shadow-xl shadow-gray-400/50 rounded-xl">
       <div className="text-gray-900 font-medium text-xl mb-5 ">
         Account Setting
       </div>

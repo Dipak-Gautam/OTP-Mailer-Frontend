@@ -2,12 +2,12 @@ import { SetStateAction } from "react";
 import { IEmailConfig } from "../../Schema/emailConfig.Schema";
 import { mainEndPoint } from "../ApiSettings/Endpoint";
 import secureFetch from "../ApiSettings/SecureFetch";
+import asyncStorageUserInfo from "../../CustomFunctions/localStorageUserInfo";
 
 const emailConfigApi = async (
   data: IEmailConfig,
   setIsLoading: React.Dispatch<SetStateAction<number>>
 ) => {
-  console.log("i am called");
   const formData = { data: data };
   const request = await secureFetch({
     url: mainEndPoint + "/config/email",
@@ -19,7 +19,9 @@ const emailConfigApi = async (
     body: JSON.stringify(formData),
   });
   const response = await request.json();
+
   if (request.status === 200) {
+    asyncStorageUserInfo(response.response);
     setIsLoading(3);
     return response;
   } else {
