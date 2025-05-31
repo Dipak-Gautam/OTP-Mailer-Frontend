@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import MobileProduct from "./Product/MobileProduct";
 const options = [
   { title: "Home", link: "/" },
   { title: "Docs", link: "/docs" },
@@ -12,9 +13,7 @@ const MobileOptions = () => {
       {options.map((item) => (
         <>
           {item.title === "Products" ? (
-            <div className="relative m-0 hover:bg-[#f6d4c0] p-1 px-2 rounded-md">
-              Product
-            </div>
+            <MobileProduct />
           ) : (
             <NavLink
               to={`${item.link}`}

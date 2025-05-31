@@ -11,12 +11,32 @@ const Product = () => {
         Products
       </div>
       <div
-        className={`border border-gray-500 w-30 h-30 overflow-hidden rounded-md bg-white/50 flex justify-center items-center absolute ${
+        className={`border border-gray-500 w-44  overflow-hidden rounded-md bg-white/50 flex flex-col justify-center absolute ${
           isOpen ? "visible" : "hidden"
         }`}
         onMouseLeave={() => setIsOpen(false)}
       >
-        Hello
+        <a
+          href="https://virtualpatro.com"
+          target="_"
+          className="text-gray-600 hover:text-gray-800 font-medium hover:bg-[#f3e5dc] p-2 px-4 hover:font-semibold"
+        >
+          Virtual Patro
+        </a>
+        <a
+          href="https://virtualpatro.com"
+          target="_"
+          className="text-gray-600 hover:text-gray-800 font-medium hover:bg-[#f3e5dc] p-2 px-4 hover:font-semibold"
+        >
+          Ai Assistance
+        </a>
+        <a
+          href="https://mero-car-rental.netlify.app/"
+          target="_"
+          className="text-gray-600 hover:text-gray-800 font-medium hover:bg-[#f3e5dc] p-2 px-4 hover:font-semibold"
+        >
+          Car Rental
+        </a>
       </div>
     </>
   );
