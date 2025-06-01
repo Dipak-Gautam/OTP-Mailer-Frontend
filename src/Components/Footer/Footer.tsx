@@ -6,7 +6,7 @@ import Connections from "./Connections/Connections";
 const Footer = () => {
   return (
     <div className="bg-[#f3f6fe] px-5 md:px-10 lg:px-24 flex py-12 justify-between">
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 cursor-pointer">
         <div className="w-fit">
           <div className="border border-gray-700  rounded-full p-2 bg-gray-700">
             <TbNorthStar className="text-white text-2xl md:text-4xl lg:text-6xl" />
