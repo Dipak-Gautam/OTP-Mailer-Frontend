@@ -1,25 +1,18 @@
 import { SetStateAction } from "react";
 import { mainEndPoint } from "../ApiSettings/Endpoint";
 import secureFetch from "../ApiSettings/SecureFetch";
-import { set } from "react-hook-form";
-import { IUserInfo } from "../../Schema/userInfo.Schema";
 
 const testEmailApi = async (
   email: string,
-  setMessage: React.Dispatch<SetStateAction<number>>
+  setMessage: React.Dispatch<SetStateAction<number>>,
+  responseMessage?: React.RefObject<string>
 ) => {
   try {
-    const user = localStorage.getItem("userInfo");
-
-    if (user === null) return;
-    const userData: IUserInfo = JSON.parse(user);
-
     const formData = {
       email: email,
-      otpDigit: 4,
-      secretCode: userData.secretCode,
+      otpDigit: 6,
     };
-    const response = await secureFetch({
+    const request = await secureFetch({
       url: mainEndPoint + "/email/otp-verify",
       method: "POST",
       body: JSON.stringify(formData),
@@ -27,14 +20,16 @@ const testEmailApi = async (
         "Content-Type": "application/json",
       },
     });
+    const response = await request.json();
 
-    if (response.status === 200) {
+    if (request.status === 200) {
       setMessage(2);
+      responseMessage && (responseMessage.current = response.otp);
     } else {
       setMessage(4);
     }
   } catch (error) {
-    setMessage(1);
+    setMessage(4);
     throw error;
   }
 };

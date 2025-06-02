@@ -35,7 +35,10 @@ const MainRegister = ({
         />
       )}
       {registerStage == 2 && (
-        <OtpVerification setRegisterStage={setRegisterStage} />
+        <OtpVerification
+          setRegisterStage={setRegisterStage}
+          registerData={registerData}
+        />
       )}
       {registerStage == 3 && <SetPassword registerData={registerData} />}
     </>
