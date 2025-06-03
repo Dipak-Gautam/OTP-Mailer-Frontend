@@ -22,7 +22,7 @@ const RegisterPage = ({
   const {
     control,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<IRegisterPropFirst>({
     resolver: zodResolver(RegisterSchemaFirst),
   });

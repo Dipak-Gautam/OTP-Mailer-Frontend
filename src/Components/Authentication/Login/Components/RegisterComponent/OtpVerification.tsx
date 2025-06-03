@@ -31,7 +31,6 @@ const OtpVerification = ({
     if (otp.length == 6) {
       setTryCount((prev) => prev + 1);
       if (responseMessage.current == "") return setMessage(4);
-      console.log("responseMessage", responseMessage.current, otp);
       if (otp === responseMessage.current.toString()) {
         setRegisterStage(3);
       } else {
