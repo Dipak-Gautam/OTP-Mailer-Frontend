@@ -9,15 +9,17 @@ import loginApi from "../../../../Api/AuthenticationApi/LoginApi";
 
 interface ILoginPageProp {
   setSelector: React.Dispatch<React.SetStateAction<"login" | "register">>;
+  setForgetPassword: React.Dispatch<React.SetStateAction<null | string>>;
 }
 
-const LoginPage = ({ setSelector }: ILoginPageProp) => {
+const LoginPage = ({ setSelector, setForgetPassword }: ILoginPageProp) => {
   const navigate = useNavigate();
 
   const {
     control,
     handleSubmit,
     setError,
+    getValues,
     formState: { errors, isSubmitting },
   } = useForm<ILoginProp>({
     resolver: zodResolver(LoginSignupSchema),
@@ -25,6 +27,14 @@ const LoginPage = ({ setSelector }: ILoginPageProp) => {
   const onSubmit: SubmitHandler<ILoginProp> = async (data) => {
     await loginApi(data, setError, navigate);
   };
+
+  const handleForgetPassword = (email: string) => {
+    if (email == "" || email == null)
+      return setError("email", { message: "Please enter a email" });
+
+    setForgetPassword(email);
+  };
+
   return (
     <div className="p-6">
       <div className="text-text font-poppins text-2xl text-center font-semibold">
@@ -49,7 +59,9 @@ const LoginPage = ({ setSelector }: ILoginPageProp) => {
         <div className="text-xs text-red-500">
           {errors.root && `${errors.root.message}`}
         </div>
-        <p>Forget Password?</p>
+        <p onClick={() => handleForgetPassword(getValues("email"))}>
+          Forget Password?
+        </p>
       </div>
 
       <div className=" text-white font-lexend font-medium  text-center  mt-6 rounded-md hover:bg-slate-800 cursor-pointer overflow-hidden">

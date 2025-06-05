@@ -2,6 +2,7 @@ import { MdClose } from "react-icons/md";
 import LoginPage from "./Components/LoginPage";
 import { useState } from "react";
 import MainRegister from "./Components/MainRegister";
+import ForgetPasswordMain from "./Components/ForgetPassword/ForgetPasswordMain";
 
 interface LoginProp {
   open: boolean;
@@ -13,11 +14,13 @@ const Login = ({ open, close }: LoginProp) => {
     localStorage.getItem("prevLogin") != null ? "login" : "register"
   );
   const [registerStage, setRegisterStage] = useState<number>(1);
+  const [forgetPassword, setForgetPassword] = useState<null | string>(null);
   return (
     <div
       onClick={() => {
         close();
         setRegisterStage(1);
+        setForgetPassword(null);
       }}
       className={`fixed inset-0 flex justify-center items-center transition-colors bg-slate-200/50 ${
         open ? "visible " : "invisible "
@@ -34,19 +37,29 @@ const Login = ({ open, close }: LoginProp) => {
           onClick={() => {
             close();
             setRegisterStage(1);
+            setForgetPassword(null);
           }}
         >
           <MdClose className="text-white text-xl" />
         </div>
         <div>
-          {selector == "login" ? (
-            <LoginPage setSelector={setSelector} />
+          {forgetPassword != null ? (
+            <ForgetPasswordMain forgetPassword={forgetPassword} />
           ) : (
-            <MainRegister
-              setSelector={setSelector}
-              registerStage={registerStage}
-              setRegisterStage={setRegisterStage}
-            />
+            <div>
+              {selector == "login" ? (
+                <LoginPage
+                  setSelector={setSelector}
+                  setForgetPassword={setForgetPassword}
+                />
+              ) : (
+                <MainRegister
+                  setSelector={setSelector}
+                  registerStage={registerStage}
+                  setRegisterStage={setRegisterStage}
+                />
+              )}
+            </div>
           )}
         </div>
       </div>
