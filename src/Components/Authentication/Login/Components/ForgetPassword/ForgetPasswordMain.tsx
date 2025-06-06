@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import OtpVerification from "../RegisterComponent/OtpVerification";
+import NewPassword from "./NewPassword";
 
 interface ForgetPasswordProp {
   forgetPassword: string;
@@ -21,7 +22,9 @@ const ForgetPasswordMain = ({ forgetPassword }: ForgetPasswordProp) => {
           setRegisterStage={setForgetStage}
         />
       ) : (
-        <div>hello</div>
+        <div className="p-5">
+          <NewPassword />
+        </div>
       )}
     </div>
   );
