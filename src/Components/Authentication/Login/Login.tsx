@@ -22,7 +22,7 @@ const Login = ({ open, close }: LoginProp) => {
         setRegisterStage(1);
         setForgetPassword(null);
       }}
-      className={`fixed inset-0 flex justify-center items-center transition-colors bg-slate-200/50 ${
+      className={`fixed inset-0 flex justify-center items-center transition-colors bg-slate-200/50 z-20 ${
         open ? "visible " : "invisible "
       }`}
     >

@@ -9,8 +9,14 @@ import {
   INewPassword,
   INewPasswordSchema,
 } from "../../../../../Schema/newPassword.Schema";
+import newPasswordApi from "../../../../../Api/AuthenticationApi/newPasswordApi";
+import { registerData } from "../MainRegister";
 
-const NewPassword = () => {
+interface NewPasswordProp {
+  registerData: registerData;
+}
+
+const NewPassword = ({ registerData }: NewPasswordProp) => {
   const [showAlert, setShowAlert] = useState(false);
 
   const {
@@ -23,16 +29,11 @@ const NewPassword = () => {
   });
 
   const onSubmit: SubmitHandler<INewPassword> = (data) => {
-    // changePasswordApi(
-    //   data.oldPassword,
-    //   data.newPassword,
-    //   setShowAlert,
-    //   setError
-    // );
+    newPasswordApi(registerData.email, data.newPassword, setShowAlert);
   };
 
   return (
-    <div>
+    <div className="relative">
       <TextInputControllers
         control={control}
         error={errors.newPassword}
@@ -63,11 +64,11 @@ const NewPassword = () => {
           </div>
         )}
       </div>
-      <SuccessAlert
-        message="Password changed successfully"
-        onClose={() => setShowAlert(false)}
-        showAlert={showAlert}
-      />
+      {showAlert && (
+        <div className=" absolute  bottom-1 p-2 rounded-2xl bg-green-600 font-medium text-center text-white text-sm mx-0   ">
+          Password Changed Sucessfully
+        </div>
+      )}
     </div>
   );
 };

@@ -23,7 +23,7 @@ const ForgetPasswordMain = ({ forgetPassword }: ForgetPasswordProp) => {
         />
       ) : (
         <div className="p-5">
-          <NewPassword />
+          <NewPassword registerData={registerData} />
         </div>
       )}
     </div>
