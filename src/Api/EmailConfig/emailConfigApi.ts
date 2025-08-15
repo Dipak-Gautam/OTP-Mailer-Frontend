@@ -9,6 +9,7 @@ const emailConfigApi = async (
   setIsLoading: React.Dispatch<SetStateAction<number>>
 ) => {
   const formData = { data: data };
+  console.log("formData", formData);
   const request = await secureFetch({
     url: mainEndPoint + "/config/email",
     method: "POST",

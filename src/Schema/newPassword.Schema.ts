@@ -2,7 +2,7 @@ import { string, z } from "zod";
 
 export const INewPasswordSchema = z
   .object({
-    newPassword: string().min(8, "Password must be at least 8 character long"),
+    newPassword: string().min(8, "password must be at least 8 character long"),
     confirmPassword: string().min(8, "password must be min 8 character long."),
   })
   .refine((data) => data.newPassword != data.confirmPassword, {
