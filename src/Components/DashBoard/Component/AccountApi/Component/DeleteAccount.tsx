@@ -9,7 +9,7 @@ const DeleteAccount = () => {
       <div className="md:flex flex-1">
         <div className="flex flex-1 justify-center items-center min-h-28">
           <div
-            className="p-2 px-3 bg-red-500 text-white font-semibold rounded-md cursor-pointer hover:bg-red-600 transition duration-200 ease-in-out"
+            className="p-2 px-3 bg-red-500 text-white font-semibold rounded-md cursor-pointer hover:bg-red-700 transition duration-500 ease-in-out hover:shadow-md shadow-red-500/50"
             onClick={() => setClose(true)}
           >
             Delete Account
