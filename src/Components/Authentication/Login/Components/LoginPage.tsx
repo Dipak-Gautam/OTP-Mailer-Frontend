@@ -72,7 +72,7 @@ const LoginPage = ({ setSelector, setForgetPassword }: ILoginPageProp) => {
           </div>
         ) : (
           <div
-            className="flex-1 border p-2 bg-orange-400 hover:bg-orange-500"
+            className="flex-1 border p-2 bg-orange-400 hover:bg-orange-500 duration-400 transition-all hover:shadow-md"
             onClick={handleSubmit(onSubmit)}
           >
             Login
@@ -82,7 +82,7 @@ const LoginPage = ({ setSelector, setForgetPassword }: ILoginPageProp) => {
       <div className="font-lexend text-slate-600 text-center mt-6 text-sm">
         Don't have an account?{" "}
         <span
-          className="text-text font-medium cursor-pointer"
+          className=" font-medium cursor-pointer hover:text-slate-950 duration-500 transition-colors hover:underline"
           onClick={() => setSelector("register")}
         >
           Register

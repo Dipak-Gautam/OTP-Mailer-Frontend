@@ -51,14 +51,14 @@ const RegisterPage = ({
       </div>
       <div
         onClick={handleSubmit(onSubmit)}
-        className="bg-orange-400 hover:bg-orange-500 text-white font-lexend font-medium p-2 text-center  mt-6 rounded-md cursor-pointer"
+        className="bg-orange-400 hover:bg-orange-500 text-white font-lexend font-medium p-2 text-center  mt-6 rounded-md cursor-pointer duration-400 transition-all hover:shadow-md"
       >
         Register
       </div>
       <div className="font-lexend text-slate-600 text-center mt-6 text-sm">
-        Already have an account?
+        Already have an account?{" "}
         <span
-          className="text-text font-medium cursor-pointer"
+          className=" font-medium cursor-pointer hover:text-slate-950 duration-500 transition-all hover:underline"
           onClick={() => setSelector("login")}
         >
           Login
