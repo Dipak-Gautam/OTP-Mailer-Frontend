@@ -26,6 +26,7 @@ const OtpVerification = ({
   useEffect(() => {
     testEmailApi(registerData.email, setMessage, responseMessage);
   }, []);
+  console.log(responseMessage.current);
 
   const handleVerify = () => {
     if (otp.length == 6) {

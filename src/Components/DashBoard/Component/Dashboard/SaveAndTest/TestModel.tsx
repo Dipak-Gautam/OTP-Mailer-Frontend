@@ -14,7 +14,6 @@ const TestModel = ({ open, onClose }: SaveModelProps) => {
   const [message, setMessage] = React.useState<number>(0);
 
   const isValidEmail = (email: string) => {
-    console.log("Validating email:", email);
     const regex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?:(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})$/;
     return regex.test(email);

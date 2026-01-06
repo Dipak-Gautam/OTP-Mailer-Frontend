@@ -11,21 +11,37 @@ const testEmailApi = async (
   const userData: IUserInfo = JSON.parse(
     localStorage.getItem("userInfo") || "null"
   );
+
   try {
     const formData = {
       email: email,
       otpDigit: 6,
-      secretCode: userData.secretCode,
+      secretCode: userData?.secretCode,
     };
-    const request = await secureFetch({
-      url: mainEndPoint + "/email/otp",
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: ` Bearer ${localStorage.getItem("token")}`,
-      },
-    });
+    let request;
+
+    if (userData.secretCode) {
+      request = await secureFetch({
+        url: mainEndPoint + "/email/otp",
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: ` Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+    } else {
+      request = await secureFetch({
+        url: mainEndPoint + "/email/otp-verify",
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: ` Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+    }
+
     const response = await request.json();
 
     if (request.status === 200) {
