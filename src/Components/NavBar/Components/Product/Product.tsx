@@ -5,7 +5,7 @@ const Product = () => {
   return (
     <>
       <div
-        className="hover:font-semibold hover:text-gray-600"
+        className="hover:font-semibold hover:text-gray-600 cursor-pointer"
         onClick={() => setIsOpen((isOpen) => !isOpen)}
       >
         Products

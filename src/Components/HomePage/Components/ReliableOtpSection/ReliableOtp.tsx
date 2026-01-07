@@ -1,8 +1,10 @@
 import React from "react";
 import OrangeButton from "../../../Buttons/OrangeButton/OrangeButton";
 import { loginModalProp } from "../../../HeroImage/HeroImage";
+import { useNavigate } from "react-router-dom";
 
 const ReliableOtp = ({ setShowModal }: loginModalProp) => {
+  const navigation = useNavigate();
   return (
     <div className="flex mx-5 md:mx-10 lg:mx-20 my-14 gap-8 lg:gap-16">
       <div className="flex flex-col justify-center gap-8 px-8">
@@ -16,7 +18,10 @@ const ReliableOtp = ({ setShowModal }: loginModalProp) => {
         </div>
         <div className="flex items-center gap-5">
           <OrangeButton title="Send Now" onClick={() => setShowModal(true)} />
-          <div className="text-[#f8663f] hover:text-orange-400 font-semibold underline">
+          <div
+            className="text-[#f8663f] hover:text-orange-400 font-semibold underline cursor-pointer"
+            onClick={() => navigation("/docs")}
+          >
             Learn More
           </div>
         </div>
