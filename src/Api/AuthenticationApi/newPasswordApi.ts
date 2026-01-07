@@ -7,14 +7,16 @@ const newPasswordApi = async (
   password: string,
   setShowAlert: React.Dispatch<SetStateAction<boolean>>
 ) => {
+  console.log(`${mainEndPoint}/user/change`);
   const request = await secureFetch({
-    url: mainEndPoint + `/user/forget-password`,
+    url: "http://localhost:3000/user/change",
     method: "POST",
     headers: {
       "content-type": "application/json",
     },
     body: JSON.stringify({ email: email, newPassword: password }),
   });
+
   if (request.status == 200) {
     setShowAlert(true);
   }

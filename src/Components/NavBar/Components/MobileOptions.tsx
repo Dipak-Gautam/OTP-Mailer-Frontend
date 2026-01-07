@@ -10,27 +10,25 @@ const options = [
 const MobileOptions = () => {
   return (
     <div className="flex flex-col gap-3 flex-1">
-      {options.map((item) => (
-        <>
-          {item.title === "Products" ? (
-            <MobileProduct />
-          ) : (
-            <NavLink
-              to={`${item.link}`}
-              key={item.title}
-              className={({ isActive }) =>
-                isActive
-                  ? "font-bold text-gray-900 bg-[#f3e5dc] hover:bg-[#f6d4c0] p-1 px-2 rounded-md"
-                  : " hover:bg-[#f6d4c0] p-1 px-2 rounded-md "
-              }
-            >
-              <div className="hover:font-semibold hover:text-gray-700">
-                {item.title}
-              </div>
-            </NavLink>
-          )}
-        </>
-      ))}
+      {options.map((item) =>
+        item.title === "Products" ? (
+          <MobileProduct key={item.title} />
+        ) : (
+          <NavLink
+            key={item.title}
+            to={item.link}
+            className={({ isActive }) =>
+              isActive
+                ? "font-bold text-gray-900 bg-[#f3e5dc] hover:bg-[#f6d4c0] p-1 px-2 rounded-md"
+                : "hover:bg-[#f6d4c0] p-1 px-2 rounded-md"
+            }
+          >
+            <div className="hover:font-semibold hover:text-gray-700">
+              {item.title}
+            </div>
+          </NavLink>
+        )
+      )}
     </div>
   );
 };

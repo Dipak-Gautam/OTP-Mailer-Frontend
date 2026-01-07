@@ -20,7 +20,7 @@ const testEmailApi = async (
     };
     let request;
 
-    if (userData.secretCode) {
+    if (userData?.secretCode != null) {
       request = await secureFetch({
         url: mainEndPoint + "/email/otp",
         method: "POST",

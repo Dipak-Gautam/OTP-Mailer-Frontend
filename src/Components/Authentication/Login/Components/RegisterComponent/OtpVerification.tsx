@@ -17,6 +17,7 @@ const OtpVerification = ({
   const [otp, setOtp] = React.useState("");
   const [message, setMessage] = useState<number>(0);
   const responseMessage = useRef<string>("");
+  const hasCalledApi = useRef(false);
   const [tryCount, setTryCount] = useState(0);
 
   const handleChange = (newValue: string) => {
@@ -24,9 +25,10 @@ const OtpVerification = ({
   };
 
   useEffect(() => {
+    if (hasCalledApi.current) return;
+    hasCalledApi.current = true;
     testEmailApi(registerData.email, setMessage, responseMessage);
   }, []);
-  console.log(responseMessage.current);
 
   const handleVerify = () => {
     if (otp.length == 6) {
@@ -86,7 +88,7 @@ const OtpVerification = ({
             onClick={() => handleVerify()}
             className="bg-orange-400 hover:bg-orange-500 text-white font-lexend font-medium p-2 text-center  my-6 rounded-md  cursor-pointer"
           >
-            Verify
+            Verify Email
           </div>
         ) : (
           <div

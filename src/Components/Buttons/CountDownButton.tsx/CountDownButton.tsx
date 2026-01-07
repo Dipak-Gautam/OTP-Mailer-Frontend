@@ -1,37 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 interface CountDownButtonProps {
   onResend: () => void;
-  autoStart?: boolean; // if you want to auto-start on load
+  autoStart?: boolean;
+  duration?: number;
 }
 
 const CountDownButton: React.FC<CountDownButtonProps> = ({
   onResend,
   autoStart = true,
+  duration = 30,
 }) => {
-  const [counter, setCounter] = useState<number>(autoStart ? 30 : 0);
-  const [isCounting, setIsCounting] = useState<boolean>(autoStart);
+  const [counter, setCounter] = useState(autoStart ? duration : 0);
+  const [isCounting, setIsCounting] = useState(autoStart);
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
+    if (!isCounting) return;
 
-    if (isCounting && counter > 0) {
-      timer = setTimeout(() => {
-        setCounter((prev) => prev - 1);
-      }, 1000);
-    } else if (counter === 0 && isCounting) {
-      setIsCounting(false);
-    }
+    intervalRef.current = window.setInterval(() => {
+      setCounter((prev) => {
+        if (prev <= 1) {
+          setIsCounting(false);
+          window.clearInterval(intervalRef.current!);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [counter, isCounting]);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isCounting]);
 
   const handleResend = () => {
-    if (!isCounting) {
-      setCounter(30);
-      setIsCounting(true);
-      onResend(); // call after state set
-    }
+    if (isCounting) return;
+
+    setCounter(duration);
+    setIsCounting(true);
+    onResend();
   };
 
   return (
@@ -39,14 +50,14 @@ const CountDownButton: React.FC<CountDownButtonProps> = ({
       onClick={handleResend}
       className={`font-medium ${
         isCounting
-          ? "text-gray-400 cursor-not-allowed "
+          ? "text-gray-400 cursor-not-allowed"
           : "text-text cursor-pointer hover:text-slate-900"
       }`}
     >
       {isCounting ? (
-        <span className="text-blue-500 text-center">{counter}</span>
+        <span className="text-blue-500">{counter}</span>
       ) : (
-        <span className="text-blue-500 text-center ">Resend</span>
+        <span className="text-blue-500">Resend</span>
       )}
     </span>
   );
