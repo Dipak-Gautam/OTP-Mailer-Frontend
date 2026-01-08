@@ -3,13 +3,13 @@ import { loginModalProp } from "../../../HeroImage/HeroImage";
 
 const ApiDriven = ({ setShowModal }: loginModalProp) => {
   return (
-    <div className=" mx-5 md:mx-10 lg:mx-20 py-20">
-      <div className="flex flex-col items-center text-xs md:text-lg font-medium text-gray-400 gap-3">
+    <div className=" mx-5 md:mx-10 lg:mx-20 py-8 md:py-20">
+      <div className="flex flex-col items-center text-xs md:text-lg font-medium text-gray-400 gap-2 md:gap-3">
         <div>Seamless Integration</div>
         <div className="text-black font-SpaceMono font-extrabold text-2xl md:text-4xl italic">
           API-Driven OTP
         </div>
-        <div className=" text-sm md:text-base w-[60%] text-center">
+        <div className=" text-xs md:text-base md:w-[60%] text-center">
           Integrate OTP-Mailer's powerful API into your existing systems,
           ensuring a smooth and effortless user experience for your customers
         </div>

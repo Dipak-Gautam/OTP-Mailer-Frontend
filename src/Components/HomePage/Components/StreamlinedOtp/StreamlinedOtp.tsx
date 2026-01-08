@@ -2,7 +2,7 @@ import React from "react";
 
 const StreamlinedOtp = () => {
   return (
-    <div className=" px-5 md:px-10 my-24">
+    <div className=" px-5 md:px-10 my-10 md:my-24">
       <div className="text-center space-y-4">
         <div className="text-black font-SpaceMono text-2xl md:text-4xl font-bold italic">
           Streamlined OTP Delivery

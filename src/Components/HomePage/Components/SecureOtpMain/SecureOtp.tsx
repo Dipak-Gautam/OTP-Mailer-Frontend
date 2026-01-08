@@ -4,7 +4,7 @@ import { loginModalProp } from "../../../HeroImage/HeroImage";
 const SecureOtp = ({ setShowModal }: loginModalProp) => {
   return (
     <div
-      className=" mx-5 md:mx-10 lg:mx-20 my-24 p-5 py-14 md:py-20 rounded-3xl  bg-left-top lg:bg-cover bg-no-repeat "
+      className=" mx-5 md:mx-10 lg:mx-20 my-10 md:my-24 p-5 py-14 md:py-20 rounded-3xl  bg-left-top lg:bg-cover bg-no-repeat "
       style={{
         backgroundImage: `url("assets/SecureOtp.jpg")`,
       }}
