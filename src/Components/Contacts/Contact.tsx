@@ -10,7 +10,7 @@ const Contact = () => {
     <>
       <div className=" mt-4 ">
         <Navbar setShowModal={setShowModal} />
-        <div className=" w-[90%] mx-auto flex flex-col flex-1   mt-5 mb-9">
+        <div className=" w-full md:w-[90%] mx-auto flex flex-col flex-1   mt-5 mb-9">
           <ContactComponent />
         </div>
         <Footer />

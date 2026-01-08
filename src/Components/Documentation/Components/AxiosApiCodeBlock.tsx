@@ -39,7 +39,7 @@ axios.post("http://localhost:3000/email/otp", {
           <code className="break-all">{code}</code>
         </pre>
       </div>
-      <p className="font-medium">
+      <p className="font-medium text-xs md:text-base">
         ⚠️ Note: Replace{" "}
         <code className="font-bold">YOUR_SECRET_CODE_HERE</code> with your
         actual secret code from the <strong>Account & API</strong> section.

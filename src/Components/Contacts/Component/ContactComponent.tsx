@@ -24,25 +24,25 @@ const ContactComponent = () => {
     console.log("hello from submit");
   };
   return (
-    <div className="flex-1 h-[100vh] overflow-y-auto">
+    <div className="flex-1 md:h-[100vh] overflow-y-auto">
       <div
-        className=" flex-1 text-gray-500 font-lexend p-5 bg-no-repeat  h-[700px] w-full flex justify-end"
+        className=" flex-1 text-gray-500 font-lexend p-5 bg-no-repeat  md:h-[700px] w-full flex justify-end bg-cover"
         style={{
           backgroundImage: "url('/assets/Contact/ai3.jpg')",
           backgroundSize: "contain",
         }}
       >
         <div className="border rounded-lg border-slate-3 shadow-md p-3 md:p-5 xl:w-[40%] md:mr-6 md:mt-6 backdrop-blur-3xl ">
-          <div className="text-lg font-semibold font-SpaceMono text-orange-400 ">
+          <div className=" text-sm md:text-lg font-semibold font-SpaceMono text-orange-400 ">
             Get In Touch
           </div>
-          <div className="text-center font-SpaceMono text-black text-4xl font-semibold my-3 italic">
+          <div className="text-center font-SpaceMono text-black text-2xl md:text-4xl font-semibold md:my-3 italic">
             Contact
           </div>
-          <div className="text-center mb-5 font-medium">
+          <div className="text-center mb-5 font-medium text-xs md:text-base">
             Provide me your information I will reach back to you.
           </div>
-          <div className="my-3 mx-12">
+          <div className="md:my-3 md:mx-12">
             <TextInputControllers
               label="Name"
               name="Name"
@@ -56,7 +56,7 @@ const ContactComponent = () => {
               error={errors.email}
             />
           </div>
-          <div className="mx-12 my-5">
+          <div className="md:mx-12 md:my-5">
             <div className="text-sm mb-2">Message :</div>
             <textarea
               name=""
@@ -66,7 +66,7 @@ const ContactComponent = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-4 md:mt-8">
             <OrangeButton title="Submit" />
           </div>
         </div>

@@ -11,7 +11,7 @@ const Connections = () => {
       <div className="text-2xl flex flex-col gap-3 text-gray-700 ">
         <div className="flex  text-base font-medium  gap-2 hover:text-blue-400 cursor-pointer">
           <MdFacebook className=" text-lg md:text-2xl" />
-          <div className="hidden md:flex">Boma Colo</div>
+          <div className="hidden md:flex">Dipak Gautam</div>
         </div>
         <div className="flex  text-base font-medium  gap-2 hover:text-blue-400 cursor-pointer">
           <FaLinkedin className="text-lg md:text-2xl" />
