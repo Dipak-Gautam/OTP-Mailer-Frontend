@@ -52,7 +52,7 @@ const ChangePasswordOld = () => {
       <TextInputControllers
         control={control}
         error={errors.confirmPassword}
-        label="Conform Password"
+        label="Confirm Password"
         name="confirmPassword"
         type="password"
       />

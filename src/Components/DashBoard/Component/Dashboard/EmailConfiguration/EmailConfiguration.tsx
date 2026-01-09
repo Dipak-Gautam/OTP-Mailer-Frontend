@@ -117,7 +117,7 @@ const EmailConfiguration = ({ userData }: EmailConfigurationProps) => {
         />
       </div>
 
-      <div className="h-full  flex-1 space-y-5 border-l pl-5 bg-slate-50">
+      <div className="h-full  flex-1 space-y-5 md:border-l md:pl-5 bg-slate-50">
         <TemplateSetting
           titleColor={titleColor}
           titleBackgroundColor={titleBackgroundColor}
