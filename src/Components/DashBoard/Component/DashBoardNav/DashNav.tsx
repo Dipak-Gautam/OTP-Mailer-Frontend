@@ -23,18 +23,43 @@ const DashNav = () => {
       </div>
 
       <div className="flex-1">
-        <div className="my-8  space-y-5">
+        <div className="my-8  space-y-2">
           <NavLink
             to={"/dashboard"}
             end
             className={({ isActive }) =>
               isActive
-                ? " flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
-                : "flex items-center gap-4 text-xl  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+                ? " flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
             }
           >
             <MdDashboard className="text-2xl" />
-            <div className="text-black font-medium">Dashboard</div>
+            <div className="text-black font-medium">Otp Email</div>
+          </NavLink>
+          <NavLink
+            to={"/dashboard"}
+            end
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
+          >
+            <MdDashboard className="text-2xl" />
+            <div className="text-black font-medium">Welcome Email</div>
+          </NavLink>
+
+          <NavLink
+            to={"/dashboard"}
+            end
+            className={({ isActive }) =>
+              isActive
+                ? " flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer bg-[#f8d3bb]"
+                : "flex items-center gap-4 text-lg  p-2 px-3 rounded-md hover:bg-[#f3d8c7] cursor-pointer"
+            }
+          >
+            <MdDashboard className="text-2xl" />
+            <div className="text-black font-medium">Custom Email</div>
           </NavLink>
 
           {/* <NavLink
@@ -52,7 +77,7 @@ const DashNav = () => {
 
         <div className=" border border-b border-gray-500" />
 
-        <div className="my-8 space-y-5">
+        <div className="my-8 space-y-2">
           <NavLink
             to={"docs"}
             className={({ isActive }) =>
