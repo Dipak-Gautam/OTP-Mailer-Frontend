@@ -37,7 +37,7 @@ const DashNav = () => {
             <div className="text-black font-medium">Otp Email</div>
           </NavLink>
           <NavLink
-            to={"/dashboard"}
+            to={"welcome-mail"}
             end
             className={({ isActive }) =>
               isActive
@@ -50,7 +50,7 @@ const DashNav = () => {
           </NavLink>
 
           <NavLink
-            to={"/dashboard"}
+            to={"product-mail"}
             end
             className={({ isActive }) =>
               isActive

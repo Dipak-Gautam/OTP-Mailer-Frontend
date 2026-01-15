@@ -9,6 +9,8 @@ import DashContact from "./Components/DashBoard/Component/DashContact/DashContac
 import DashDocumentation from "./Components/DashBoard/Component/DashDocumentation/DashDocumentation";
 import AuthRedirect from "./AuthRedirect";
 import ProtectedRoute from "./ProtectedRoute";
+import WelcomeMail from "./Components/DashBoard/Component/WelcomeMail/WelcomeMail";
+import ProductMail from "./Components/DashBoard/Component/ProductMail/ProductMail";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,8 @@ const router = createBrowserRouter([
         element: <DashboardMain />,
         children: [
           { path: "", element: <Dashboard /> },
+          { path: "welcome-mail", element: <WelcomeMail /> },
+          { path: "product-mail", element: <ProductMail /> },
           { path: "docs", element: <DashDocumentation /> },
           { path: "contact", element: <DashContact /> },
           { path: "account", element: <AccountApi /> },
